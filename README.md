@@ -13,8 +13,8 @@
 - others : 0
 
 ## Shell setup (macOS & Linux)
-
-- [Fish shell](https://fishshell.com/)
+- [Kitty](https://sw.kovidgoyal.net/kitty/) - Offloads rendering to the GPU for lower system load
+- [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
