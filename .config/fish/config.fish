@@ -13,7 +13,6 @@ end
 #     exec tmux a
 #     # Commands to run in interactive sessions can go here
 # end
-~/.local/bin/mise activate fish | source
 
 set fish_greeting ""
 
@@ -52,6 +51,7 @@ switch (uname)
         source (dirname (status --current-filename))/config-osx.fish
     case Linux
         source (dirname (status --current-filename))/config-linux.fish
+        ~/.local/bin/mise activate fish | source
     case '*'
         source (dirname (status --current-filename))/config-windows.fish
 end

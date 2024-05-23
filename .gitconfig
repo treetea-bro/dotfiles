@@ -39,7 +39,7 @@
 [hub]
   protocol = https
 [github]
-	user = craftzdog
+	user = treetea-bro 
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
@@ -55,3 +55,6 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[user]
+  name = peco
+  email = sorpwjdafh@naver.com
