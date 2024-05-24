@@ -1,18 +1,7 @@
 if status is-interactive
-    and not set -q TMUX
-    if tmux has-session 2>/dev/null; or test $status -eq 1
-        tmux a
-    else
-        tmux
-    end
+    tmux a
     # Commands to run in interactive sessions can go here
 end
-
-# if status is-interactive
-#     and not set -q TMUX
-#     exec tmux a
-#     # Commands to run in interactive sessions can go here
-# end
 
 set fish_greeting ""
 
