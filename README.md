@@ -23,3 +23,5 @@
 - [ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
 - [fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 - [mise](https://github.com/jdx/mise) - language manage tool
+- [git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams.
+- [lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands 
