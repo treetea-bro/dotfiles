@@ -430,23 +430,23 @@ end)
 config.text_background_opacity = 0.6
 
 function get_background_path()
-    local os_type = os.getenv("OS") or os.getenv("OSTYPE")
-    if os_type and os_type:lower():match("windows") then
+	local os_type = os.getenv("OS") or os.getenv("OSTYPE")
+	if os_type and os_type:lower():match("windows") then
 		config.default_domain = "WSL:Ubuntu-24.04"
-        return "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
+		return "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
 		-- return "C:/Users/sorpw/.config/wezterm/backgrounds/abc.gif"
-    else
-        return "/home/sorpw/.config/wezterm/backgrounds/stars.jpg"
-    end
+	else
+		return "/home/sorpw/.config/wezterm/backgrounds/stars.jpg"
+	end
 end
 
 config.background = {
-    {
-        source = { File = { path = get_background_path(), speed = 0.2 } },
-        opacity = 1,
-        width = "100%",
-        hsb = { brightness = 1 },
-    },
+	{
+		source = { File = { path = get_background_path(), speed = 0.2 } },
+		opacity = 1,
+		width = "100%",
+		hsb = { brightness = 1 },
+	},
 }
 
 -- and finally, return the configuration to wezterm
