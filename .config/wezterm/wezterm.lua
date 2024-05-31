@@ -427,25 +427,26 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
-config.text_background_opacity = 0.6
-
-function get_background_path()
-	local os_type = os.getenv("OS") or os.getenv("OSTYPE")
-	if os_type and os_type:lower():match("windows") then
-		config.default_domain = "WSL:Ubuntu-24.04"
-		return "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
-		-- return "C:/Users/sorpw/.config/wezterm/backgrounds/abc.gif"
-	else
-		return os.getenv("HOME") .. "/.config/wezterm/backgrounds/sketch.jpg"
-	end
+local brightness = 1
+local backgrounds_path = ""
+local os_type = os.getenv("OS") or os.getenv("OSTYPE")
+if os_type and os_type:lower():match("windows") then
+	brightness = 1
+	config.text_background_opacity = 0.6
+	config.default_domain = "WSL:Ubuntu-24.04"
+	backgrounds_path = "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
+else
+	brightness = 0.35
+	config.text_background_opacity = 0.6
+	backgrounds_path = os.getenv("HOME") .. "/.config/wezterm/backgrounds/sketch.jpg"
 end
 
 config.background = {
 	{
-		source = { File = { path = get_background_path(), speed = 0.2 } },
+		source = { File = { path = backgrounds_path, speed = 0.2 } },
 		opacity = 1,
 		width = "100%",
-		hsb = { brightness = 1 },
+		hsb = { brightness = brightness },
 	},
 }
 
