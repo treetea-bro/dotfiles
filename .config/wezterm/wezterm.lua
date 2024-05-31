@@ -15,8 +15,6 @@ wezterm.on("gui-startup", function()
 end)
 
 -- Use the config_builder which will help provide clearer error messages
-local config = wezterm.config_builder()
-
 --- Config struct documentation
 -- https://wezfurlong.org/wezterm/config/lua/config/index.html
 -- This table will hold the configuration.
@@ -200,7 +198,7 @@ local defaultFontProperties = {
 	harfbuzz_features = ligature_features,
 }
 
-local function font_argon(params)
+local function font_config()
 	local p = orDefault(defaultFontProperties)
 
 	return {
@@ -214,10 +212,9 @@ end
 
 config.font = wezterm.font_with_fallback({
 	-- "Monaspace Radon",
-	font_argon(),
-	"JetBrains Mono",
-	"Noto Color Emoji",
-	-- 'Fira Code',
+	font_config(),
+	-- "JetBrains Mono",
+	-- "Noto Color Emoji",
 	-- 'Operator Mono Lig',
 	-- 'Monoid',
 	-- 'Monoisome',
@@ -228,106 +225,22 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.font_size = 16.00
--- config.font_size = 10.85
 config.line_height = 1.16
 config.warn_about_missing_glyphs = true
 
 -- @see https://wezfurlong.org/wezterm/config/lua/config/freetype_load_target.html
 config.freetype_load_target = "HorizontalLcd"
 
--- @see https://wezfurlong.org/wezterm/config/lua/config/font_rules.html
--- config.font_rules = {
---   --
---   -- Italic (comments)
---   --
---   {
---     intensity = "Normal",
---     italic = true,
---     font = wezterm.font({
---       family = "Monaspace Radon",
---       weight = "ExtraLight",
---       stretch = "Normal",
---       style = "Normal",
---       harfbuzz_features = ligature_features,
---     }),
---   },
-
---   --
---   -- Bold (highlighting)
---   --
---   {
---     intensity = "Bold",
---     italic = false,
---     font = wezterm.font({
---       family = "Monaspace Neon",
---       weight = "Medium",
---       stretch = "Normal",
---       style = "Normal",
---       harfbuzz_features = ligature_features,
---     }),
---   },
-
---   --
---   -- Bold Italic
---   --
---   {
---     intensity = "Bold",
---     italic = true,
---     font = wezterm.font({
---       family = "Monaspace Radon",
---       style = "Italic",
---       weight = "Bold",
---       harfbuzz_features = ligature_features,
---     }),
---   },
-
---   --
---   -- Half
---   --
---   {
---     intensity = "Half",
---     italic = false,
---     font = wezterm.font({
---       family = "Monaspace Argon Var",
---       style = "Normal",
---       weight = "ExtraLight",
---       harfbuzz_features = ligature_features,
---     }),
---   },
-
---   --
---   -- Half Italic
---   --
---   {
---     intensity = "Half",
---     italic = true,
---     font = wezterm.font({
---       family = "Monaspace Radon",
---       style = "Normal",
---       weight = "ExtraLight",
---       harfbuzz_features = ligature_features,
---     }),
---   },
--- }
-
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = 'Material (base16)'
--- config.color_scheme = 'MaterialDarker'
--- config.color_scheme = 'Material Darker (base16)'
--- config.color_scheme = "MaterialDesignColors"
-config.color_scheme = "Mikado (terminal.sexy)"
+-- config.color_scheme = "Material (base16)"
+-- config.color_scheme = "MaterialDarker"
+-- config.color_scheme = "Material Darker (base16)"
+config.color_scheme = "MaterialDesignColors"
+-- config.color_scheme = "Mikado (terminal.sexy)"
 -- config.color_scheme = "Hardcore"
--- config.color_scheme = 'Codeschool (dark) (terminal.sexy)'
-
-config.colors = {
-	visual_bell = "#202020",
-}
-
---
--- Miscellaneous
---
+-- config.color_scheme = "Codeschool (dark) (terminal.sexy)"
 
 local misc = {
 	adjust_window_size_when_changing_font_size = false,
@@ -450,5 +363,4 @@ config.background = {
 	},
 }
 
--- and finally, return the configuration to wezterm
 return config
