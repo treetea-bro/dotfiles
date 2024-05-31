@@ -313,7 +313,6 @@ config.keys = {
 	-- Disable ctrl - / ctrl = so that we can use them in Vim
 	{ key = "-", mods = "CTRL", action = wezterm.action.Nop },
 	{ key = "=", mods = "CTRL", action = wezterm.action.Nop },
-	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 }
 
 -- @see https://github.com/folke/zen-mode.nvim#wezterm
