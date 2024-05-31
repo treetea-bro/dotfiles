@@ -436,7 +436,7 @@ function get_background_path()
 		return "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
 		-- return "C:/Users/sorpw/.config/wezterm/backgrounds/abc.gif"
 	else
-		return "/home/sorpw/.config/wezterm/backgrounds/stars.jpg"
+		return os.getenv("HOME") .. "/.config/wezterm/backgrounds/sketch.jpg"
 	end
 end
 
