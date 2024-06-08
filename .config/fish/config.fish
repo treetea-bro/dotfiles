@@ -1,7 +1,7 @@
-if status is-interactive
-    tmux a
-    # Commands to run in interactive sessions can go here
-end
+# if status is-interactive
+#     tmux a
+#     # Commands to run in interactive sessions can go here
+# end
 
 set fish_greeting ""
 
