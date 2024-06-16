@@ -1,24 +1,24 @@
 [colors]
 ansi = [
     '000000',
-    '000000',
-    '000000',
-    '000000',
+    'FF0800', # git deleted line & git unstaged
+    '7CFC00', # git added line
+    'D020FF', # inside quote or double quote (string)
     '00BFFF', # command
-    '000000',
-    'FF8200', # 옵션
-    '000000',
+    '7CFC00', # g a background
+    'FF8200', # command option
+    'FF0800',
 ]
 # background = '000000'
 brights = [
-    '3FFF00', # 추천 글씨
-    'FC0FC0', # 이미 친 글씨
-    'FFFFFF',
-    'FFFFFF',
-    'FFFFFF',
-    'FFFFFF',
-    'FFFFFF',
-    'FFFFFF',
+    '7CFC00', # recommand
+    'FC102F', # already typed
+    'E0F7FA',
+    'FF8200', # ll -> group id, user id
+    'E0F7FA', # ll -> file, folder name
+    'E0F7FA',
+    'FFFFFF', # special symbol
+    'E0F7FA',
 ]
 cursor_bg = '7CFC00'
 cursor_border = '7CFC00'
