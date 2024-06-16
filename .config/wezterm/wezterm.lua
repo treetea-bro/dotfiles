@@ -5,21 +5,15 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
+local config = wezterm.config_builder()
+
 local mux = wezterm.mux
-local act = wezterm.action
 
 -- Maximize the window on startup
 wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})
 	window:gui_window():maximize()
 end)
-
--- Use the config_builder which will help provide clearer error messages
---- Config struct documentation
--- https://wezfurlong.org/wezterm/config/lua/config/index.html
--- This table will hold the configuration.
-
-local config = wezterm.config_builder()
 
 -- Remove extra space.
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
@@ -42,34 +36,6 @@ local colors = {
 	lilac = "#BAA0E8",
 }
 
--- config.color_scheme = 'Dracula (Official)'
--- config.colors = {
---     background = colors.bg,
---     tab_bar = {
---         inactive_tab_edge = colors.black,
---         active_tab = {
---             bg_color = colors.lilac,
---             fg_color = colors.black,
---         },
---         inactive_tab = {
---             bg_color = colors.black,
---             fg_color = colors.dark_lilac,
---         },
---         inactive_tab_hover = {
---             bg_color = colors.black,
---             fg_color = colors.lilac,
---         },
---         new_tab = {
---             bg_color = colors.bg,
---             fg_color = colors.lilac,
---         },
---         new_tab_hover = {
---             bg_color = colors.lilac,
---             fg_color = colors.black,
---         },
---     },
--- }
-
 -- Tab bar.
 config.hide_tab_bar_if_only_one_tab = true
 config.window_frame = {
@@ -78,36 +44,8 @@ config.window_frame = {
 	inactive_titlebar_bg = colors.black,
 }
 
--- config.cell_width = 0.9
-
---
--- Key assignments
---
-
--- Defaults: https://wezfurlong.org/wezterm/config/default-keys.html
-
---
--- Hyperlinks
---
-
--- https://wezfurlong.org/wezterm/hyperlinks.html
-
--- Terminal hyperlinks
--- https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
--- printf '\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'
-
 -- Use the defaults as a base.  https://wezfurlong.org/wezterm/config/lua/config/hyperlink_rules.html
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
-
--- make username/project paths clickable. this implies paths like the following are for github.
--- ( "nvim-treesitter/nvim-treesitter" | wbthomason/packer.nvim | wez/wezterm | "wez/wezterm.git" )
--- as long as a full url hyperlink regex exists above this it should not match a full url to
--- github or gitlab / bitbucket (i.e. https://gitlab.com/user/project.git is still a whole clickable url)
-
--- Regex syntax:  https://docs.rs/regex/latest/regex/#syntax and https://docs.rs/fancy-regex/latest/fancy_regex/#syntax
--- Lua's [[ ]] literal strings prevent character [[:classes:]] :(
--- To avoid "]]] at end, use "[a-z].{0}]]"
--- https://www.lua.org/pil/2.4.html#:~:text=bracketed%20form%20may%20run%20for%20several%20lines%2C%20may%20nest
 
 table.insert(config.hyperlink_rules, {
 	-- https://github.com/shinnn/github-username-regex  https://stackoverflow.com/a/64147124/5353461
@@ -148,36 +86,6 @@ local ligature_features = {
 	"ssty", -- math script style alternatives
 	"zero", -- slashed zero
 }
-
--- Weights:
--- "Thin"
--- "ExtraLight"
--- "Light"
--- "DemiLight"
--- "Book"
--- "Regular"
--- "Medium"
--- "DemiBold"
--- "Bold"
--- "ExtraBold"
--- "Black"
--- "ExtraBlack"
-
--- Stretch:
--- "UltraCondensed"
--- "ExtraCondensed"
--- "Condensed"
--- "SemiCondensed"
--- "Normal"
--- "SemiExpanded"
--- "Expanded"
--- "ExtraExpanded"
--- "UltraExpanded".
-
--- Style:
--- "Normal"
--- "Oblique"
--- "Italic"
 
 local function isNil(param)
 	return param == nil
@@ -237,7 +145,7 @@ config.freetype_load_target = "HorizontalLcd"
 -- config.color_scheme = "Material (base16)"
 -- config.color_scheme = "MaterialDarker"
 -- config.color_scheme = "Material Darker (base16)"
-config.color_scheme = "MaterialDesignColors"
+-- config.color_scheme = "materialdesigncolors"
 -- config.color_scheme = "Mikado (terminal.sexy)"
 -- config.color_scheme = "Hardcore"
 -- config.color_scheme = "Codeschool (dark) (terminal.sexy)"
@@ -260,7 +168,6 @@ local misc = {
 	-- macos_window_background_blur = 40,
 	-- macos_window_background_blur = 50,
 	-- window_background_opacity = 0.92,
-	window_background_opacity = 1.0,
 	-- window_background_opacity = 0.78,
 	-- window_background_opacity = 0.20,
 
@@ -282,32 +189,32 @@ config.underline_position = -6
 config.underline_thickness = "250%"
 
 -- @see https://wezfurlong.org/wezterm/config/lua/wezterm/permute_any_mods.html?h=mouse_bindings
-config.mouse_bindings = {
-	-- This will disable the default click to open URL behavior
-	{
-		event = { Up = { streak = 1, button = "Left" } },
-		mods = "NONE",
-		action = "Nop",
-	},
-	-- Ctrl-click will open the link under the mouse cursor
-	{
-		event = { Up = { streak = 1, button = "Left" } },
-		mods = "SUPER",
-		action = wezterm.action.OpenLinkAtMouseCursor,
-	},
-}
-
-wezterm.on("format-tab-title", function(tab)
-	-- Get the process name.
-	local process = string.gsub(tab.active_pane.foreground_process_name, "(.*[/\\])(.*)", "%2")
-
-	-- Current working directory.
-	local cwd = tab.active_pane.current_working_dir
-	cwd = cwd and string.format("%s ", cwd.file_path:gsub(os.getenv("HOME"), "~")) or ""
-
-	-- Format and return the title.
-	return string.format("(%d %s) %s", tab.tab_index + 1, process, cwd)
-end)
+-- config.mouse_bindings = {
+-- 	-- This will disable the default click to open URL behavior
+-- 	{
+-- 		event = { Up = { streak = 1, button = "Left" } },
+-- 		mods = "NONE",
+-- 		action = "Nop",
+-- 	},
+-- 	-- Ctrl-click will open the link under the mouse cursor
+-- 	{
+-- 		event = { Up = { streak = 1, button = "Left" } },
+-- 		mods = "SUPER",
+-- 		action = wezterm.action.OpenLinkAtMouseCursor,
+-- 	},
+-- }
+--
+-- wezterm.on("format-tab-title", function(tab)
+-- 	-- Get the process name.
+-- 	local process = string.gsub(tab.active_pane.foreground_process_name, "(.*[/\\])(.*)", "%2")
+--
+-- 	-- Current working directory.
+-- 	local cwd = tab.active_pane.current_working_dir
+-- 	cwd = cwd and string.format("%s ", cwd.file_path:gsub(os.getenv("HOME"), "~")) or ""
+--
+-- 	-- Format and return the title.
+-- 	return string.format("(%d %s) %s", tab.tab_index + 1, process, cwd)
+-- end)
 
 config.keys = {
 	-- Disable ctrl - / ctrl = so that we can use them in Vim
@@ -343,20 +250,28 @@ local brightness = 1
 local backgrounds_path = ""
 local os_type = os.getenv("OS") or os.getenv("OSTYPE")
 if os_type and os_type:lower():match("windows") then
-	brightness = 1
-	config.text_background_opacity = 0.6
+	brightness = 0.5
+	config.text_background_opacity = 0.7
 	config.default_domain = "WSL:Ubuntu-24.04"
-	backgrounds_path = "C:/Users/sorpw/.config/wezterm/backgrounds/stars.jpg"
+	backgrounds_path = os.getenv("USERPROFILE") .. "/.config/wezterm/backgrounds/stars.jpg"
+	config.color_scheme_dirs = { os.getenv("USERPROFILE") .. "/.config/wezterm/colors/PecoArcade.toml" }
 else
 	brightness = 0.35
 	config.text_background_opacity = 0.6
 	backgrounds_path = os.getenv("HOME") .. "/.config/wezterm/backgrounds/sketch.jpg"
 end
 
+config.color_scheme = "PecoArcade"
+
 config.background = {
 	{
-		source = { File = { path = backgrounds_path, speed = 0.2 } },
-		opacity = 1,
+		source = {
+			File = {
+				path = backgrounds_path,
+				-- speed = 0.2, # gif
+			},
+		},
+		opacity = 1, -- Warning : if under 1, macOS opacity transparent
 		width = "100%",
 		hsb = { brightness = brightness },
 	},
