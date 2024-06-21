@@ -22,7 +22,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		{ import = "lazyvim.plugins.extras.lang.sql" },
 		{ import = "lazyvim.plugins.extras.lang.docker" },
-		{ import = "lazyvim.plugins.extras.coding.copilot" },
+		-- { import = "lazyvim.plugins.extras.coding.copilot" },
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
 		{ import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 		-- { import = "lazyvim.plugins.extras.dap.core" },
