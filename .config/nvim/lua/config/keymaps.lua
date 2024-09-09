@@ -3,15 +3,14 @@
 -- Add any additional keymaps here
 
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 
---Delete a word backwards
+-- Delete a word backwards
 keymap.set("n", "dw", "vb_d")
-
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Tab
-keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
+-- -- Tab
+-- local opts = { noremap = true, silent = true }
+-- keymap.set("n", "te", ":tabedit<Return>", opts)
+-- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+-- keymap.set("n", "<S-tab>", ":tabprev<Return>", opts)
