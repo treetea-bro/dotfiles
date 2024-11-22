@@ -9,6 +9,8 @@ keymap.set("n", "dw", "vb_d")
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+vim.keymap.set("n", "<C-u>", require("dial.map").inc_normal(), { noremap = true })
+vim.keymap.set("n", "<C-d>", require("dial.map").dec_normal(), { noremap = true })
 -- -- Tab
 -- local opts = { noremap = true, silent = true }
 -- keymap.set("n", "te", ":tabedit<Return>", opts)
