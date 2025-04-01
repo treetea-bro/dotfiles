@@ -38,8 +38,6 @@
 
 [hub]
   protocol = https
-[github]
-	user = treetea-bro 
 [diff]
   tool = nvimdiff
 [difftool "nvimdiff"]
