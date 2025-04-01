@@ -8,7 +8,7 @@
 - [Wezterm](https://wezfurlong.org/wezterm/) - WezTerm is a powerful cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
 // - [zellij](https://github.com/zellij-org/zellij) - Terminal Multiplexers
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
-- [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use
+- [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use (set fish as default shell : chsh -s $(which fish))
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
 - [Lazyvim](https://www.lazyvim.org/) - LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config.
