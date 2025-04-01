@@ -6,7 +6,7 @@
 ## Setup
 - [Rustup](https://www.rust-lang.org/tools/install) - Rustup installs The Rust Programming Language from the official release channels
 - [Wezterm](https://wezfurlong.org/wezterm/) - WezTerm is a powerful cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
-- [zellij](https://github.com/zellij-org/zellij) - Terminal Multiplexers
+// - [zellij](https://github.com/zellij-org/zellij) - Terminal Multiplexers
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
 - [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
