@@ -4,6 +4,7 @@
 - defaults write NSGlobalDomain KeyRepeat -int 1
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
 ## Setup
+- [Rustup](https://www.rust-lang.org/tools/install) - Rustup installs The Rust Programming Language from the official release channels
 - [Wezterm](https://wezfurlong.org/wezterm/) - WezTerm is a powerful cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust
 - [zellij](https://github.com/zellij-org/zellij) - Terminal Multiplexers
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Hack.
