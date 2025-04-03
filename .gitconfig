@@ -1,7 +1,5 @@
 [core]
-	excludesfile = ~/.gitignore
 	editor = nvim
-	ignorecase = false
 [push]
   default = simple
 [color]
@@ -35,7 +33,6 @@
   edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
   # add conflicted file on merge
   add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
-
 [hub]
   protocol = https
 [diff]
@@ -53,6 +50,8 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[github]
+	user = maymust-seungmin
 [user]
-  name = peco
-  email = sorpwjdafh@naver.com
+  name = seungmin
+  email = seungmin@maymust.com
