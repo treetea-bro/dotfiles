@@ -1,3 +1,6 @@
+.dotnet/
+.vscode-server/
+.wget-hsts
 .aws
 .azure
 .bash_history
