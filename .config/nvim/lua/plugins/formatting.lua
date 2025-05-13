@@ -15,7 +15,7 @@ return {
       },
       formatters = {
         prettier = {
-          prepend_args = { "--print-width", "60" },
+          prepend_args = { "--print-width", "80" },
         },
       },
     },
