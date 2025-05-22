@@ -31,7 +31,7 @@ apt install neovim
 ### Git
 - [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (mise install ghq)
 - [Lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands (mise install lazygit) 
-- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams.
+- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams. (first. mise install pipx && second. check link inside)
 
 # windows
 ## keyboard
