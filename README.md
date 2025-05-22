@@ -1,10 +1,10 @@
 # (macOS & Linux)
 ## install neovim (Linux only)
-apt update
-apt install -y software-properties-common
-add-apt-repository ppa:neovim-ppa/unstable
-apt update
-apt install neovim
+apt update  
+apt install -y software-properties-common  
+add-apt-repository ppa:neovim-ppa/unstable  
+apt update  
+apt install neovim  
 ## keyboard (mac only)
 ### open terminal and paste below
 - defaults write NSGlobalDomain KeyRepeat -int 1
