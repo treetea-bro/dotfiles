@@ -25,14 +25,13 @@ apt install neovim
 - [Eza](https://github.com/eza-community/eza) - `ls` replacement
 - [Fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 
-### Git
-- [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
-- [Lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands 
-- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams.
-
 ### Tool
 - [Mise](https://github.com/jdx/mise) - language manage tool
-- [Lazyvim](https://www.lazyvim.org/) - LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config.
+  
+### Git
+- [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (mise install ghq)
+- [Lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands (mise install lazygit) 
+- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams.
 
 # windows
 ## keyboard
