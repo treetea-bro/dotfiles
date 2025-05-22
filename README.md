@@ -5,12 +5,16 @@
 3. move the folder and files to ~/
 4. install setups
 
-## install neovim (Linux only)
+## install neovim (Linux version)
 apt update  
 apt install -y software-properties-common  
 add-apt-repository ppa:neovim-ppa/unstable  
 apt update  
 apt install neovim  
+
+## install ripgrep (Linux version)
+for lazyvim auto complete && search word etc, you gonna be install ripgrep  
+apt install ripgrep  
 
 ## keyboard (mac only)
 ### open terminal and paste below
