@@ -1,14 +1,22 @@
 # (macOS & Linux)
+## sequence
+1. install neovim
+2. git pull
+3. move the folder and files to ~/
+4. install setups
+
 ## install neovim (Linux only)
 apt update  
 apt install -y software-properties-common  
 add-apt-repository ppa:neovim-ppa/unstable  
 apt update  
 apt install neovim  
+
 ## keyboard (mac only)
 ### open terminal and paste below
 - defaults write NSGlobalDomain KeyRepeat -int 1
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
 ## Setup
 ### Terminal
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Fira code.
