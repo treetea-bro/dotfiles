@@ -1,9 +1,10 @@
 # (macOS & Linux)
 ## sequence
 1. install neovim
-2. git pull
-3. move the folder and files to ~/
-4. install setups
+2. install ripgrep
+3. git pull
+4. move the folder and files to ~/
+5. install setups
 
 ## install neovim (Linux version)
 apt update  
