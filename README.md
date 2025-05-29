@@ -2,8 +2,8 @@
 ## sequence
 1. install neovim
 2. install ripgrep
-3. git pull
-4. move the folder and files to ~/
+3. git clone
+4. move the folder and files to home directory (rsync -avh --ignore-existing dotfiles/ .)
 5. install setups
 
 ## install neovim (Linux version)
