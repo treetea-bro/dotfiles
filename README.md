@@ -34,8 +34,8 @@ apt install ripgrep
 - [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use (set fish as default shell : `chsh -s $(which fish)`)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
-- [Z for fish](https://github.com/jethrokuan/z) - Directory jumping
-- [Eza](https://github.com/eza-community/eza) - `ls` replacement
+- [Z for fish](https://github.com/jethrokuan/z) - Directory jumping (fisher install jethrokuan/z)
+- [Eza](https://github.com/eza-community/eza) - `ls` replacement (cargo install eza)
 - [Fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 
 ### Tool
