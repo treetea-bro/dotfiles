@@ -7,11 +7,11 @@
 5. install setups
 
 ## install neovim (Linux version)
-apt update  
-apt install -y software-properties-common  
-add-apt-repository ppa:neovim-ppa/unstable  
-apt update  
-apt install neovim  
+sudo apt update  
+sudo apt install -y software-properties-common  
+sudo add-apt-repository --yes ppa:neovim-ppa/unstable  
+sudo apt update  
+sudo apt install -y neovim  
 
 ## install ripgrep (Linux version)
 for lazyvim auto complete && search word etc, you gonna be install ripgrep  
