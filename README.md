@@ -38,7 +38,7 @@ sudo apt install ripgrep
 - [Fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 
 ### Tool
-- [Mise](https://github.com/jdx/mise) - language manage tool
+- [Mise](https://github.com/jdx/mise) - language manage tool (curl https://mise.run | sh)
   
 ### Git
 - [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (mise install ghq)
