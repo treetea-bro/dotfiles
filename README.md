@@ -14,8 +14,7 @@ sudo apt update
 sudo apt install -y neovim  
 
 ## install ripgrep (Linux version)
-for lazyvim auto complete && search word etc, you gonna be install ripgrep  
-apt install ripgrep  
+sudo apt install ripgrep  
 
 ## keyboard (mac only)
 ### open terminal and paste below
