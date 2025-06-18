@@ -1,8 +1,26 @@
 # (macOS & Linux)
+## sequence
+1. install neovim
+2. install ripgrep
+3. git clone
+4. move the folder and files to home directory (rsync -avh --ignore-existing dotfiles/ .)
+5. install setups
+
+## install neovim (Linux version)
+sudo apt update  
+sudo apt install -y software-properties-common  
+sudo add-apt-repository --yes ppa:neovim-ppa/unstable  
+sudo apt update  
+sudo apt install -y neovim  
+
+## install ripgrep (Linux version)
+sudo apt install ripgrep  
+
 ## keyboard (mac only)
 ### open terminal and paste below
 - defaults write NSGlobalDomain KeyRepeat -int 1
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
+
 ## Setup
 ### Terminal
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) - Powerline-patched fonts. I use Fira code.
@@ -15,18 +33,17 @@
 - [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use (set fish as default shell : `chsh -s $(which fish)`)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
-- [Z for fish](https://github.com/jethrokuan/z) - Directory jumping
-- [Eza](https://github.com/eza-community/eza) - `ls` replacement
+- [Z for fish](https://github.com/jethrokuan/z) - Directory jumping (fisher install jethrokuan/z)
+- [Eza](https://github.com/eza-community/eza) - `ls` replacement (cargo install eza)
 - [Fzf](https://github.com/PatrickF1/fzf.fish) - Interactive filtering
 
-### Git
-- [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer
-- [Lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands 
-- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams.
-
 ### Tool
-- [Mise](https://github.com/jdx/mise) - language manage tool
-- [Lazyvim](https://www.lazyvim.org/) - LazyVim is a Neovim setup powered by 💤 lazy.nvim to make it easy to customize and extend your config.
+- [Mise](https://github.com/jdx/mise) - language manage tool (curl https://mise.run | sh)
+  
+### Git
+- [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (mise install ghq)
+- [Lazygit](https://github.com/jesseduffield/lazygit) - A simple terminal UI for git commands (mise install lazygit) 
+- [Git commitizen](https://commitizen-tools.github.io/commitizen/) - Commitizen is release management tool designed for teams. (first. mise install pipx && second. check link inside)
 
 # windows
 ## keyboard

@@ -8,7 +8,7 @@ local keymap = vim.keymap
 -- keymap.set("n", "dw", "vb_d")
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- Resize window
 keymap.set("n", "<C-Left>", ":vertical resize -10<CR>", { noremap = true, silent = true })
