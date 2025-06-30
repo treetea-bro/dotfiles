@@ -26,6 +26,9 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.coding.mini-surround" },
 		{ import = "lazyvim.plugins.extras.coding.yanky" },
 
+		-- editor
+		{ import = "lazyvim.plugins.extras.editor.inc-rename" },
+
 		-- ui
 		{ import = "lazyvim.plugins.extras.ui.indent-blankline" },
 		{ import = "lazyvim.plugins.extras.ui.treesitter-context" },
