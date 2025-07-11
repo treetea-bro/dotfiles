@@ -30,7 +30,8 @@ sudo apt install ripgrep
 - [Rustup](https://www.rust-lang.org/tools/install) - Rustup installs The Rust Programming Language from the official release channels
 
 ### Shell
-- [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use (set fish as default shell : `chsh -s $(which fish)`)
+- [Nix](https://nixos.org/) - Declarative builds and deployments. (sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon)
+- [Fish shell](https://fishshell.com/) - Fish prioritizes simplicity and ease of use (`chsh -s $(which fish)`)
 - [Fisher](https://github.com/jorgebucaran/fisher) - Plugin manager
 - [Tide](https://github.com/IlanCosman/tide) - Shell theme. Use version 5: `fisher install ilancosman/tide@v5`
 - [Z for fish](https://github.com/jethrokuan/z) - Directory jumping (fisher install jethrokuan/z)
@@ -39,6 +40,7 @@ sudo apt install ripgrep
 
 ### Tool
 - [Mise](https://github.com/jdx/mise) - language manage tool (curl https://mise.run | sh)
+- [Direnv](https://direnv.net/) - can load and unload environment variables depending on the current directory. (mise install direnv)
   
 ### Git
 - [Ghq](https://github.com/x-motemen/ghq) - Local Git repository organizer (mise install ghq)
