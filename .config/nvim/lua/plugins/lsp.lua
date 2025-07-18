@@ -8,7 +8,7 @@ return {
 					default_config = {
 						cmd = { "pyrefly", "lsp" },
 						filetypes = { "python" },
-						root_dir = require("lspconfig.util").root_pattern("pyproject.toml", ".git"),
+						root_dir = require("lspconfig.util").root_pattern("pyproject.toml"),
 						settings = {},
 						single_file_support = true,
 					},
