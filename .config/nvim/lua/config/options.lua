@@ -12,3 +12,7 @@ vim.g.lazyvim_prettier_needs_config = false
 -- vim.scriptencoding = "utf-8"
 -- vim.opt.encoding = "utf-8"
 -- vim.opt.fileencoding = "utf-8"
+
+-- change neo-tree root directory to when it first opend directory
+vim.opt.autochdir = false
+vim.g.root_spec = { "cwd" }
