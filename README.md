@@ -53,7 +53,7 @@
 - [Neovim](https://neovim.io/) : brew install neovim
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) : brew install ripgrep
 - [Mise](https://github.com/jdx/mise) : brew install mise
-- [Direnv](https://direnv.net/) : mise install direnv
+- [Direnv](https://direnv.net/) : mise install direnv && mise use -g direnv
 
 ### Git
 - [Ghq](https://github.com/x-motemen/ghq) : mise install ghq && mise use -g ghq
@@ -90,7 +90,7 @@
 - [Z for fish](https://github.com/jethrokuan/z) : fisher install jethrokuan/z
 - [Fzf](https://github.com/PatrickF1/fzf.fish)
 - [Mise](https://github.com/jdx/mise) : curl https://mise.run | sh
-- [Direnv](https://direnv.net/) : mise install direnv
+- [Direnv](https://direnv.net/) : mise install direnv && mise use -g direnv
   
 ### Git
 - [Ghq](https://github.com/x-motemen/ghq) : mise install ghq && mise use -g ghq
