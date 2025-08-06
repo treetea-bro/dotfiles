@@ -1,3 +1,10 @@
+# Vimium
+## Custom key mappings
+map J goBack  
+map K goForward  
+map H previousTab  
+map L nextTab  
+
 # Mac
 ## Keyboard
 ### Open terminal then paste below then restart computer to apply
