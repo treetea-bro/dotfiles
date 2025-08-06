@@ -13,30 +13,6 @@ map L nextTab
 - defaults write -g ApplePressAndHoldEnabled -bool false  
 ### Karabiner
 1. Install [Karabiner](https://karabiner-elements.pqrs.org/)
-2. Open Karabiner app
-3. Click Complex Modifications
-4. Click Add your own rule
-5. Copy and paste below
-```json
-{
-    "description": "R_ALT to switch input languages",
-    "manipulators": [
-        {
-            "from": { "key_code": "right_alt" },
-            "to": [
-                {
-                    "key_code": "spacebar",
-                    "lazy": true,
-                    "modifiers": ["left_control", "left_alt"],
-                    "repeat": false
-                }
-            ],
-            "type": "basic"
-        }
-    ]
-}
-```
-6. Click save
 
 ## Pre install
 - [Homebrew](https://brew.sh/ko/) : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
