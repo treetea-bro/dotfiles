@@ -1,17 +1,15 @@
 # Mac
-## keyboard
-### open terminal and paste below
+## Keyboard
+### Open terminal then paste below then restart computer to apply
 - defaults write NSGlobalDomain KeyRepeat -int 1
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
-- defaults write -g ApplePressAndHoldEnabled -bool false
-
-## install
-- [Karabiner](https://karabiner-elements.pqrs.org/)
-### Karabiner setting
-1. open karabiner
-2. click Complex Modifications
-3. click Add your own rule
-4. copy and paste below
+- defaults write -g ApplePressAndHoldEnabled -bool false  
+### Karabiner
+1. install [Karabiner](https://karabiner-elements.pqrs.org/)
+2. open Karabiner app
+3. click Complex Modifications
+4. click Add your own rule
+5. copy and paste below
 ```json
 {
     "description": "R_ALT to switch input languages",
@@ -31,10 +29,12 @@
     ]
 }
 ```
-5. click save
+6. click save
+
+## Pre install
+- [Homebrew](https://brew.sh/ko/) : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 - [Wezterm](https://wezfurlong.org/)
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) : brew install --cask font-fira-code-nerd-font
-- [Homebrew](https://brew.sh/ko/) : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 - [Neovim](https://neovim.io/) : brew install neovim
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) : brew install ripgrep
 
@@ -43,7 +43,7 @@
 2. git clone https://github.com/treetea-bro/dotfiles.git
 3. rsync -avh --ignore-existing dotfiles/ .
 
-## Setup
+## Post install
 ### Common
 - [Rustup](https://www.rust-lang.org/tools/install) - Rustup installs The Rust Programming Language from the official release channels
 
