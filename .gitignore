@@ -36,7 +36,8 @@ go/
 snap/
 .CFUserTextEncoding
 .DS_Store
-.config/karabiner/
+.config/karabiner/*
+!karabiner.json
 .nix-profile
 .shiv/
 .zprofile
