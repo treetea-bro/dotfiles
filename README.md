@@ -38,7 +38,7 @@
 
 ## Clone
 1. cd ~
-2. git clone https://github.com/treetea-bro/dotfiles.git
+2. git clone git@github.com:treetea-bro/dotfiles.git
 3. rsync -avh --ignore-existing dotfiles/ .
 
 ## Post install
@@ -78,7 +78,7 @@
 
 ## Clone
 1. cd ~
-2. git clone https://github.com/treetea-bro/dotfiles.git
+2. git clone git@github.com:treetea-bro/dotfiles.git
 3. rsync -avh --ignore-existing dotfiles/ .
 
 ## Post install
