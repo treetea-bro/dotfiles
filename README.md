@@ -1,17 +1,44 @@
-#Mac
-## keyboard (mac only)
+# Mac
+## keyboard
 ### open terminal and paste below
 - defaults write NSGlobalDomain KeyRepeat -int 1
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
+- defaults write -g ApplePressAndHoldEnabled -bool false
 
 ## install
-- [Wezterm](https://wezfurlong.org)
+- [Karabiner](https://karabiner-elements.pqrs.org/)
+### Karabiner setting
+1. open karabiner
+2. click Complex Modifications
+3. click Add your own rule
+4. copy and paste below
+```json
+{
+    "description": "R_ALT to switch input languages",
+    "manipulators": [
+        {
+            "from": { "key_code": "right_alt" },
+            "to": [
+                {
+                    "key_code": "spacebar",
+                    "lazy": true,
+                    "modifiers": ["left_control", "left_alt"],
+                    "repeat": false
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
+```
+5. click save
+- [Wezterm](https://wezfurlong.org/)
 - [Nerd fonts](https://github.com/ryanoasis/nerd-fonts) : brew install --cask font-fira-code-nerd-font
 - [Homebrew](https://brew.sh/ko/) : /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 - [Neovim](https://neovim.io/) : brew install neovim
 - [Ripgrep](https://github.com/BurntSushi/ripgrep) : brew install ripgrep
 
-## cloning settings
+## Clone
 1. cd ~
 2. git clone https://github.com/treetea-bro/dotfiles.git
 3. rsync -avh --ignore-existing dotfiles/ .
