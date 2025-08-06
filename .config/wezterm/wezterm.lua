@@ -7,6 +7,8 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+config.default_prog = { '/opt/homebrew/bin/fish' }
+
 local mux = wezterm.mux
 
 -- Maximize the window on startup
@@ -258,7 +260,7 @@ if os_type and os_type:lower():match("windows") then
 else
   brightness = 0.35
   config.text_background_opacity = 0.6
-  backgrounds_path = os.getenv("HOME") .. "/.config/wezterm/backgrounds/sketch.jpg"
+  backgrounds_path = os.getenv("HOME") .. "/.config/wezterm/backgrounds/stars.jpg"
 end
 
 config.color_scheme = "PecoArcade"

@@ -1,8 +1,3 @@
-# if status is-interactive
-#     tmux a
-#     # Commands to run in interactive sessions can go here
-# end
-
 set fish_greeting ""
 
 set -gx TERM xterm-256color
@@ -52,3 +47,4 @@ if test -f $LOCAL_CONFIG
 end
 
 direnv hook fish | source
+starship init fish | source
