@@ -23,7 +23,7 @@
           ./modules/fzf/bat.nix
           ./modules/fzf/fd.nix
           ./modules/fzf/fzf.nix
-          ./modules/starship/starship.nix
+          # ./modules/starship/starship.nix
           ./modules/wezterm/wezterm.nix
           ./modules/atuin.nix
           ./modules/bash.nix
