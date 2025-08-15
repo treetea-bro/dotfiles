@@ -13,30 +13,23 @@
   home.shellAliases = {
     ".." = "cd ..";
     "..." = "cd ../..";
-    explain = "gh copilot explain";
-    ghce = "gh copilot explain";
-    ghcs = "gh copilot suggest";
-    help-explain = "gh copilot explain";
-    less = "${pkgs.nvimpager}/bin/nvimpager";
+    v = "nvim";
 
-    help-suggest = "gh copilot suggest";
+    # git
     g = "git";
     lg = "lazygit";
+
+    # eza
     l = "eza --long --icons --color --hyperlink --git-ignore";
     ll = "eza --long --icons --color --hyperlink";
     lla = "eza -la --icons --color --hyperlink";
     lt = "eza --long --tree --icons --color --hyperlink";
     lta = "eza -la --tree --icons --color --hyperlink";
+
+    # nix
     nd = "nix develop -c $SHELL";
     ndo = "nix develop --offline --command $SHELL";
     ncg = "nix-collect-garbage";
-    o = "xdg-open";
-    steammount = ''
-      udisksctl unmount -b /dev/disk/by-uuid/98bf9471-2174-498f-b8d8-9b918a387ec4 &&
-      udisksctl mount -b /dev/disk/by-uuid/98bf9471-2174-498f-b8d8-9b918a387ec4 --options " exec "
-    '';
-    suggest = "gh copilot suggest";
-    v = "nvim";
   };
 
   home.packages = with pkgs; [];
@@ -44,7 +37,6 @@
   home.file = { };
 
   home.sessionVariables = {
-    VISUAL = "nvim";
     EDITOR = "nvim";
   };
 

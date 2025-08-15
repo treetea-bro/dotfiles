@@ -3,11 +3,6 @@
 {
   programs.wezterm = {
     enable = true;
-    # extraConfig = ''
-    #   return {
-    #     default_prog = { "${pkgs.fish}/bin/fish", "-l" },
-    #   }
-    # '';
   };
 
   xdg.configFile = {
