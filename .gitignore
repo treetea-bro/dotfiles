@@ -1,0 +1,7 @@
+*
+!.gitignore
+!.config
+!.config/home-manager
+!.config/home-manager/**
+!.config/nix
+!.config/nix/**
