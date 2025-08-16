@@ -22,3 +22,7 @@
 1. cd ~
 2. git clone git@github.com:treetea-bro/dotfiles.git
 3. rsync -avh --ignore-existing dotfiles/ .
+4. home-manager switch  
+
+# Mac
+1. System Settings > Privacy & Security > Full Disk Access > Enable WezTerm
