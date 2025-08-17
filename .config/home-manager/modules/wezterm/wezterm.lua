@@ -2,6 +2,8 @@ local wezterm = require("wezterm")
 
 local config = wezterm.config_builder()
 
+config.default_prog = { "${pkgs.fish}/bin/fish", "--login" }
+
 local mux = wezterm.mux
 
 -- Maximize the window on startup
