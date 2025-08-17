@@ -37,6 +37,8 @@
   home.file = { };
 
   home.sessionVariables = {
+    SHELL = "${pkgs.fish}/bin/fish";
+    EDITOR = "nvim";
   };
 
   programs.home-manager.enable = true;

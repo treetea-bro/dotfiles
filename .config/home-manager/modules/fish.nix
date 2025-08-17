@@ -16,7 +16,10 @@
         src = pkgs.fishPlugins.autopair.src;
       }
     ];
+
     interactiveShellInit = ''
+      set fish_greeting ""
+
       fish_vi_key_bindings
       atuin init fish | source
       if not set -q tide_left_prompt_items
@@ -25,4 +28,5 @@
     '';
   };
 }
+
 

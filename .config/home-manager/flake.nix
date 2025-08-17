@@ -28,7 +28,6 @@
           ./modules/fzf/bat.nix
           ./modules/fzf/fd.nix
           ./modules/fzf/fzf.nix
-          # ./modules/starship/starship.nix
           ./modules/wezterm/wezterm.nix
           ./modules/atuin.nix
           ./modules/bash.nix
@@ -44,7 +43,6 @@
           ./modules/nerd-font.nix
           ./modules/nodejs.nix
           ./modules/ripgrep.nix
-          ./modules/rustup.nix
           ./modules/yazi.nix
           ./modules/zoxide.nix
         ];
