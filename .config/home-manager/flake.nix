@@ -2,14 +2,18 @@
   description = "Home Manager configuration of peco";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/master";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, ... }:
     let
       system = "aarch64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -18,6 +22,7 @@
         inherit pkgs;
 
         modules = [
+          nixvim.homeModules.nixvim
           ./home.nix
           ./modules/brave/brave.nix
           ./modules/fzf/bat.nix
@@ -35,7 +40,7 @@
           ./modules/git.nix
           ./modules/karabiner.nix
           ./modules/lazygit.nix
-          ./modules/neovim.nix
+          ./modules/nixvim
           ./modules/nerd-font.nix
           ./modules/nodejs.nix
           ./modules/ripgrep.nix
