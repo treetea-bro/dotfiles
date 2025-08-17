@@ -3,6 +3,7 @@
 {
   programs.nixvim.opts = {
     clipboard = "unnamedplus";
+    undofile = true;
     
     number = true;
     relativenumber = false;

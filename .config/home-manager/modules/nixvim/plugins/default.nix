@@ -7,6 +7,7 @@
     ./lsp.nix
     ./lualine.nix
     ./neo-tree.nix
+    ./persistence.nix
     ./telescope.nix
     ./which-key.nix
   ];
