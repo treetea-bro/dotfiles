@@ -2,6 +2,11 @@
 
 {
   programs.nixvim.plugins = {
+    cmp-nvim-lsp.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    cmp-cmdline.enable = true;
+
     cmp = {
       enable = true;
       settings = {
