@@ -3,6 +3,7 @@
 {
   imports = [
     ./options.nix
+    ./diagnostic.nix
     ./keymaps.nix
     ./colorschemes.nix
     ./plugins

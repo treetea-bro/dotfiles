@@ -3,9 +3,7 @@
 {
   programs.nixvim = {
     plugins = {
-      bufferline = {
-        enable = true;
-      };
+      notify.enable = true;
     };
   };
 }

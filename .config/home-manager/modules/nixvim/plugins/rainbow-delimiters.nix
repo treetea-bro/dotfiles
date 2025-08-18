@@ -3,7 +3,7 @@
 {
   programs.nixvim = {
     plugins = {
-      bufferline = {
+      rainbow-delimiters = {
         enable = true;
       };
     };

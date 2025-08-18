@@ -2,7 +2,8 @@
 {
   programs.wezterm = {
     enable = true;
-    extraConfig = ''
+    extraConfig = # lua 
+      '' 
       local wezterm = require("wezterm")
 
       local config = wezterm.config_builder()

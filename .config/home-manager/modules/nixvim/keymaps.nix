@@ -70,5 +70,30 @@
       action = "<cmd>bprev<cr>";
       options.desc = "Previous buffer";
     }
+
+    {
+      mode = "v";
+      key = ">";
+      action = ">gv";
+      options.desc = "Indent and reselect";
+    }
+    {
+      mode = "v";
+      key = "<";
+      action = "<gv";
+      options.desc = "Outdent and reselect";
+    }
+    {
+      mode = "v";
+      key = "J";
+      action = ":m '>+1<CR>gv=gv";
+      options.desc = "Move selection down";
+    }
+    {
+      mode = "v";
+      key = "K";
+      action = ":m '<-2<CR>gv=gv";
+      options.desc = "Move selection up";
+    }
   ];
 }
