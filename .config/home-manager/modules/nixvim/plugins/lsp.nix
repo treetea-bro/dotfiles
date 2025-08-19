@@ -13,39 +13,55 @@
             extraOptions = {
               settings = {
                 typescript = {
-                  updateImportsOnFileMove = {
-                    enabled = "always";
-                  };
+                  updateImportsOnFileMove.enabled = "always";
+                  # preferences = {
+                  #   importModuleSpecifier = "relative";
+                  #   quoteStyle = "single";
+                  #   allowRenameOfImportPath = true;
+                  # };
                   suggest = {
                     completeFunctionCalls = true;
+                    # completeUnimported = true;
+                    # autoImports = true;
+                    # includePackageJsonAutoImports = "auto";
+                    # classMemberSnippets = { enabled = true; };
+                    # objectLiteralMethodSnippets = { enabled = true; };
                   };
                   inlayHints = {
-                    parameterNames = {
-                      enabled = "all";
-                    };
-                    parameterTypes = {
-                      enabled = true;
-                    };
-                    functionLikeReturnTypes = {
-                      enabled = false;
-                    };
-                    variableTypes = {
-                      enabled = false;
-                    };
-                    propertyDeclarationTypes = {
-                      enabled = true;
-                    };
-                    enumMemberValues = {
-                      enabled = true;
-                    };
+                    parameterNames.enabled = "all";
+                    parameterTypes.enabled = true;
+                    functionLikeReturnTypes.enabled = false;
+                    variableTypes.enabled = false;
+                    propertyDeclarationTypes.enabled = true;
+                    enumMemberValues.enabled = true;
                   };
+
+                  # implementationsCodeLens = { enabled = true; };
+                  # referencesCodeLens = { enabled = true; };
                 };
               };
             };
           };
           tailwindcss.enable = true;
           nil_ls.enable = true;
-          pyright.enable = true;
+          basedpyright = {
+            enable = true;
+            settings = {
+              basedpyright = {
+                analysis = {
+                  autoSearchPaths = true;
+                  typeCheckingMode = "basic";
+                  useLibraryCodeForTypes = true;
+                  inlayHints = {
+                    callArgumentNames = true;
+                    functionReturnTypes = true;
+                    variableTypes = false;
+                    genericTypes = true;
+                  };
+                };
+              };
+            };
+          };
           ruff.enable = true;
           dockerls.enable = true;
           docker_compose_language_service.enable = true;
