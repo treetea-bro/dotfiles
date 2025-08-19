@@ -9,7 +9,7 @@
         # transparent_background = false;
       };
     };
-    
+
     # colorschemes.catppuccin.enable = true;
     # colorschemes.tokyonight.enable = true;
     # colorschemes.nord.enable = true;

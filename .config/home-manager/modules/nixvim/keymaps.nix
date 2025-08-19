@@ -11,6 +11,16 @@
 
     {
       mode = "n";
+      key = "<Esc>";
+      action = "<cmd>nohlsearch<CR>";
+      options = {
+        desc = "Clear search highlights";
+        silent = true;
+      };
+    }
+
+    {
+      mode = "n";
       key = "<C-h>";
       action = "<cmd>wincmd h<cr>";
       options.desc = "Move to left window";
@@ -33,7 +43,7 @@
       action = "<cmd>wincmd k<cr>";
       options.desc = "Move to top window";
     }
-    
+
     {
       mode = "n";
       key = "<leader>bd";

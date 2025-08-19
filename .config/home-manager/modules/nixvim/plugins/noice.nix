@@ -13,15 +13,6 @@
           notify = {
             enabled = true;
           };
-          views = {
-            notify = {
-              backend = "notify";
-              fallback = "mini";
-              format = "notify";
-              replace = false;
-              merge = false;
-            };
-          };
         };
       };
     };
