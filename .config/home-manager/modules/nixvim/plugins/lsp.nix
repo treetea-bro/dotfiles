@@ -5,9 +5,44 @@
     plugins = {
       lsp = {
         enable = true;
+        inlayHints = true;
 
         servers = {
-          vtsls.enable = true;
+          vtsls = {
+            enable = true;
+            extraOptions = {
+              settings = {
+                typescript = {
+                  updateImportsOnFileMove = {
+                    enabled = "always";
+                  };
+                  suggest = {
+                    completeFunctionCalls = true;
+                  };
+                  inlayHints = {
+                    parameterNames = {
+                      enabled = "all";
+                    };
+                    parameterTypes = {
+                      enabled = true;
+                    };
+                    functionLikeReturnTypes = {
+                      enabled = false;
+                    };
+                    variableTypes = {
+                      enabled = false;
+                    };
+                    propertyDeclarationTypes = {
+                      enabled = true;
+                    };
+                    enumMemberValues = {
+                      enabled = true;
+                    };
+                  };
+                };
+              };
+            };
+          };
           tailwindcss.enable = true;
           nil_ls.enable = true;
           pyright.enable = true;
