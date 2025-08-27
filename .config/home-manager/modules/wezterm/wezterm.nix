@@ -9,11 +9,11 @@
 
       config.unix_domains = {
         {
-          name = "session",
+          name = "workspace",
         },
       }
 
-      config.default_gui_startup_args = { "connect", "session" }
+      config.default_gui_startup_args = { "connect", "workspace" }
 
       config.leader = { key = 'l', mods = 'ALT', timeout_milliseconds = 2000 }
 
@@ -28,10 +28,10 @@
           mods = "LEADER",
           action = wezterm.action_callback(function(window, pane)
             local current_domain = pane:get_domain_name()
-            if current_domain == "session" then
+            if current_domain == "workspace" then
               window:toast_notification("Info", "Already connected to mux server", nil, 2000)
             else
-              window:perform_action(wezterm.action.AttachDomain("session"), pane)
+              window:perform_action(wezterm.action.AttachDomain("workspace"), pane)
             end
           end),
         },
@@ -108,7 +108,7 @@
         local status = string.format(" [%s] %s ", domain, workspace)
 
         window:set_right_status(wezterm.format({
-          { Foreground = { Color = domain == "session" and "#a3be8c" or "#ebcb8b" } },
+          { Foreground = { Color = domain == "workspace" and "#a3be8c" or "#ebcb8b" } },
           { Background = { Color = "#2e3440" } },
           { Text = status },
         }))
