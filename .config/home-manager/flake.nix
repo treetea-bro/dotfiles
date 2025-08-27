@@ -38,6 +38,7 @@
           ./modules/git-commitizen.nix
           ./modules/git.nix
           ./modules/karabiner.nix
+          ./modules/kubernetes-helm.nix
           ./modules/lazygit.nix
           ./modules/nixvim
           ./modules/nerd-font.nix

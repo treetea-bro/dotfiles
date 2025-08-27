@@ -14,6 +14,7 @@
     ".." = "cd ..";
     "..." = "cd ../..";
     v = "nvim";
+    k = "kubectl";
 
     # git
     g = "git";
