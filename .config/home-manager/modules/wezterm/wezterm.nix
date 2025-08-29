@@ -15,7 +15,7 @@
 
       config.default_gui_startup_args = { "connect", "workspace" }
 
-      config.leader = { key = 'l', mods = 'ALT', timeout_milliseconds = 2000 }
+      config.leader = { key = 'l', mods = 'SUPER', timeout_milliseconds = 2000 }
 
       config.keys = {
         {
