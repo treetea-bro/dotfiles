@@ -10,6 +10,7 @@
     ./lazygit.nix
     ./lsp.nix
     ./lualine.nix
+    ./mini-pairs.nix
     ./mini-surround.nix
     ./neo-tree.nix
     ./noice.nix
