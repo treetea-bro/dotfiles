@@ -16,6 +16,9 @@
     v = "nvim";
     k = "kubectl";
 
+    # google cloud
+    gc = "gcloud";
+
     # git
     g = "git";
     lg = "lazygit";

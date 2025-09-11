@@ -37,6 +37,7 @@
           ./modules/ghq.nix
           ./modules/git-commitizen.nix
           ./modules/git.nix
+          ./modules/google-cloud-sdk.nix
           ./modules/karabiner.nix
           ./modules/kubernetes-helm.nix
           ./modules/lazygit.nix
