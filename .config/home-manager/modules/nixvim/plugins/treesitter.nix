@@ -22,20 +22,21 @@
       vimdoc
       xml
       yaml
-      
+
+      python
       # TypeScript/JavaScript
       typescript
       javascript
       tsx
       jsdoc
-      
+
       # 웹 개발
       html
       css
       scss
       vue
       svelte
-      
+
       dockerfile
       gitignore
       sql
@@ -43,4 +44,3 @@
     };
   };
 }
-
