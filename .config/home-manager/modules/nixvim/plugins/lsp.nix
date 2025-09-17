@@ -42,10 +42,8 @@
               };
             };
           };
-
           tailwindcss.enable = true;
           nil_ls.enable = true;
-
           basedpyright = {
             enable = true;
             settings = {
@@ -64,8 +62,16 @@
               };
             };
           };
-
-          ruff.enable = true;
+          ruff = {
+            enable = true;
+            extraOptions.capabilities = {
+              textDocument = {
+                hover = {
+                  dynamicRegistration = false;
+                };
+              };
+            };
+          };
           dockerls.enable = true;
           docker_compose_language_service.enable = true;
         };

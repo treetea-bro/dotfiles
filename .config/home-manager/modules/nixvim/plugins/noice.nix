@@ -2,18 +2,20 @@
 
 {
   programs.nixvim = {
-    plugins = {
-      noice = {
-        enable = true;
-        settings = {
-          presets = {
-            inc_rename = true;
-            lsp_doc_border = true;
-          };
-          notify = {
+    plugins.noice = {
+      enable = true;
+      settings = {
+        lsp = {
+          hover = {
             enabled = true;
+            silent = true;
           };
         };
+        presets = {
+          inc_rename = true;
+          lsp_doc_border = true;
+        };
+        notify.enabled = true;
       };
     };
   };

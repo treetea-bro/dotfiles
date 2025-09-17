@@ -15,6 +15,7 @@
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
+    ./nvim-osc52.nix
     ./persistence.nix
     ./rainbow-delimiters.nix
     ./telescope.nix
