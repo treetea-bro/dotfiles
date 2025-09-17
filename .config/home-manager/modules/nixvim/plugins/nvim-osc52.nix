@@ -2,34 +2,25 @@
 
 {
   programs.nixvim = {
-    plugins = {
-      nvim-osc52 = {
-        enable = true;
-        keymaps = {
-          enable = true;
-        };
-      };
-    };
+    extraConfigLua = ''
+      function my_paste(reg)
+          return function(lines)
+            local content = vim.fn.getreg('"')
+            return vim.split(content, '\n')
+          end
+      end
 
-    # extraConfigLua = ''
-    #   local osc52 = require("osc52")
-    #   osc52.setup { max_length = 0, silent = true, trim = false }
-    #
-    #   local function copy(lines, regtype)
-    #     local text = table.concat(lines, "\n")
-    #
-    #     osc52.copy(text)
-    #   end
-    #
-    #   local function paste()
-    #     return vim.fn.getreg('"', 1, true), vim.fn.getregtype('"')
-    #   end
-    #
-    #   vim.g.clipboard = {
-    #     name = "osc52",
-    #     copy = { ["+"] = copy, ["*"] = copy },
-    #     paste = { ["+"] = paste, ["*"] = paste },
-    #   }
-    # '';
+      vim.g.clipboard = {
+        name = 'OSC 52',
+        copy = {
+          ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+          ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+        },
+        paste = {
+          ["+"] = my_paste("+"),
+          ["*"] = my_paste("*"),
+        },
+      }
+    '';
   };
 }
