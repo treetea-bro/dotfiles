@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./bufdelete.nix
     ./bufferline.nix
     ./cmp.nix
     ./conform.nix
