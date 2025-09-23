@@ -44,6 +44,7 @@
           ./modules/nixvim
           ./modules/nerd-font.nix
           ./modules/nodejs.nix
+          ./modules/rectangle.nix
           ./modules/ripgrep.nix
           ./modules/yazi.nix
           ./modules/zoxide.nix
