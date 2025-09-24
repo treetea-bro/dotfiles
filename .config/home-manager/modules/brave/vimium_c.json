@@ -17,7 +17,7 @@
 		"map <a-h> moveTabLeft",
 		"map <a-l> moveTabRight",
 		"",
-		"map h LinkHints.activateHover",
+		"map s LinkHints.activateHover",
 		""
 	],
 	"vimSync": true
