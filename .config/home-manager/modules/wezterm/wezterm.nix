@@ -214,11 +214,11 @@ lib.mkIf pkgs.stdenv.isDarwin {
     "wezterm/colors/PecoArcade.toml".source = ./colors/PecoArcade.toml;
   };
 
-  home.activation.wezterm-setup = lib.mkIf pkgs.stdenv.isDarwin (
-    lib.hm.dag.entryAfter ["writeBoundary"] ''
-      if [ ! -e "/Applications/WezTerm.app" ]; then
-        $DRY_RUN_CMD ln -sf ~/.nix-profile/Applications/WezTerm.app /Applications/WezTerm.app
-      fi
-    ''
-  );
+  # home.activation.wezterm-setup = lib.mkIf pkgs.stdenv.isDarwin (
+  #   lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #     if [ ! -e "/Applications/WezTerm.app" ]; then
+  #       $DRY_RUN_CMD ln -sf ~/.nix-profile/Applications/WezTerm.app /Applications/WezTerm.app
+  #     fi
+  #   ''
+  # );
 }
