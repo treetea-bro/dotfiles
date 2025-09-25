@@ -79,7 +79,7 @@
         keymaps = {
           lspBuf = {
             "K" = "hover";
-            "<C-k>" = "signature_help";
+            "<A-k>" = "signature_help";
 
             "<leader>ca" = "code_action";
           };
