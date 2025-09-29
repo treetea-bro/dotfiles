@@ -16,6 +16,7 @@
   outputs = { nixpkgs, home-manager, nixvim, ... }:
     let
       system = "aarch64-darwin";
+      # system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
