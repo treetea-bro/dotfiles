@@ -37,10 +37,20 @@ lib.mkIf pkgs.stdenv.isDarwin {
                 }];
               }];
             }
+            {
+              description = "Disable Ctrl+Space (prevent system IME switching)";
+              manipulators = [{
+                type = "basic";
+                from = {
+                  key_code = "spacebar";
+                  modifiers = { mandatory = [ "left_control" ]; };
+                };
+                to = [];
+              }];
+            }
           ];
         };
       }];
     };
   };
 }
-

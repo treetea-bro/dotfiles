@@ -6,6 +6,7 @@
     ./bufferline.nix
     ./cmp.nix
     ./conform.nix
+    ./copilot.nix
     ./inc-rename.nix
     ./indent-blankline.nix
     ./lazygit.nix

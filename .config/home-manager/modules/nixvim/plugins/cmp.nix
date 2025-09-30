@@ -11,6 +11,7 @@
       enable = true;
       settings = {
         sources = [
+          { name = "copilot"; }
           { name = "nvim_lsp"; }
           { name = "buffer"; }
           { name = "path"; }
@@ -21,10 +22,8 @@
           "<S-Tab>" = "cmp.mapping.select_prev_item()";
           "<Down>" = "cmp.mapping.select_next_item()";
           "<Up>" = "cmp.mapping.select_prev_item()";
-          
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
 
-          "<C-e>" = "cmp.mapping.abort()";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
         };
 
         window = {
