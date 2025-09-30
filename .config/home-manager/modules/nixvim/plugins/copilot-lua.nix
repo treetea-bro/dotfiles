@@ -24,7 +24,6 @@
           };
         };
       };
-      copilot-cmp.enable = true;
     };
   };
 }

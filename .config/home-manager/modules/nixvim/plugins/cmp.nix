@@ -11,6 +11,7 @@
       enable = true;
       settings = {
         sources = [
+          { name = "luasnip"; }
           { name = "copilot"; }
           { name = "nvim_lsp"; }
           { name = "buffer"; }

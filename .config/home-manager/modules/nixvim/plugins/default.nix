@@ -6,7 +6,11 @@
     ./bufferline.nix
     ./cmp.nix
     ./conform.nix
-    ./copilot.nix
+    ./copilot-cmp.nix
+    ./copilot-lua.nix
+    ./emmet.nix
+    ./friendly-snippets.nix
+    ./luasnip.nix
     ./inc-rename.nix
     ./indent-blankline.nix
     ./lazygit.nix
