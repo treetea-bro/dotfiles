@@ -6,9 +6,9 @@
       {
         mode = "n";
         key = "<leader>e";
-        action = "<cmd>Neotree reveal<cr>";
+        action = "<cmd>Neotree toggle reveal<cr>";
         options = {
-          desc = "File explorer reveal";
+          desc = "Toggle file explorer reveal";
         };
       }
     ];
