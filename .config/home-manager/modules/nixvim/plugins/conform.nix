@@ -13,15 +13,24 @@
               "shfmt"
             ];
             python = [ "ruff_fix" "ruff_format" "ruff_organize_imports" ];
-            javascript = [ "prettier" ];
-            typescript = [ "prettier" ];
-            javascriptreact = [ "prettier" ];
-            typescriptreact = [ "prettier" ];
-            css = [ "prettier" ];
-            html = [ "prettier" ];
-            json = [ "prettier" ];
-            yaml = [ "prettier" ];
-            markdown = [ "prettier" ];
+            javascript = [ "biome" ];
+            typescript = [ "biome" ];
+            javascriptreact = [ "biome" ];
+            typescriptreact = [ "biome" ];
+            css = [ "biome" ];
+            html = [ "biome" ];
+            json = [ "biome" ];
+            yaml = [ "biome" ];
+            markdown = [ "biome" ];
+            # javascript = [ "prettier" ];
+            # typescript = [ "prettier" ];
+            # javascriptreact = [ "prettier" ];
+            # typescriptreact = [ "prettier" ];
+            # css = [ "prettier" ];
+            # html = [ "prettier" ];
+            # json = [ "prettier" ];
+            # yaml = [ "prettier" ];
+            # markdown = [ "prettier" ];
             "_" = [
               "squeeze_blanks"
               "trim_whitespace"

@@ -42,6 +42,18 @@
               };
             };
           };
+          biome = {
+              enable = true;
+              # nixpkgs biome 쓰되, 로컬 node_modules biome이 있으면 그거 우선
+              packageFallback = true;
+              filetypes = [
+                "javascript" "javascriptreact"
+                "typescript" "typescriptreact"
+                "json" "css" "html" "markdown"
+              ];
+
+              rootMarkers = [ "biome.json" "package.json" ".git" ];
+          };
           tailwindcss.enable = true;
           nil_ls.enable = true;
           basedpyright = {
