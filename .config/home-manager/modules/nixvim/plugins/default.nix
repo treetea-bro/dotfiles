@@ -27,6 +27,7 @@
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
+    ./ts-autotag.nix
     ./web-devicons.nix
     ./which-key.nix
     ./yanky.nix
