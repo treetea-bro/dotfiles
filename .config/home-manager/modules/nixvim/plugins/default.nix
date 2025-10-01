@@ -11,6 +11,7 @@
     ./emmet.nix
     ./flash.nix
     ./friendly-snippets.nix
+    ./grug-far.nix
     ./luasnip.nix
     ./inc-rename.nix
     ./indent-blankline.nix
