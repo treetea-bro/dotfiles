@@ -9,6 +9,7 @@
     ./copilot-cmp.nix
     ./copilot-lua.nix
     ./emmet.nix
+    ./flash.nix
     ./friendly-snippets.nix
     ./luasnip.nix
     ./inc-rename.nix
