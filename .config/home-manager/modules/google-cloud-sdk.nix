@@ -1,10 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
-{
+lib.mkIf pkgs.stdenv.isDarwin {
   home.packages = with pkgs; [
     google-cloud-sdk
-    # (google-cloud-sdk.withExtraComponents [
-    #   google-cloud-sdk.components.cloud-build-local
-    # ])
   ];
 }
