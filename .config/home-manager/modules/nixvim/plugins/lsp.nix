@@ -76,10 +76,26 @@
           };
           ruff = {
             enable = true;
-            extraOptions.capabilities = {
-              textDocument = {
-                hover = {
-                  dynamicRegistration = false;
+            extraOptions = {
+              init_options = {
+                settings = {
+                  # 편의상, 에디터 설정이 프로젝트 설정보다 우선 (기본값이 editorFirst)
+                  configurationPreference = "editorFirst";
+
+                  lint = {
+                    # E402만 끄기
+                    ignore = [ "E402" ];
+
+                    # 만약 E4 전체(Import 관련) 끄고 싶으면:
+                    # ignore = [ "E4" ];
+                  };
+                };
+              };
+              capabilities = {
+                textDocument = {
+                  hover = {
+                    dynamicRegistration = false;
+                  };
                 };
               };
             };
