@@ -13,19 +13,16 @@
         sources = [
           { name = "luasnip"; }
           { name = "nvim_lsp"; }
-          { name = "copilot"; }
           { name = "buffer"; }
           { name = "path"; }
-          { name = "cmdline"; }
+          { name = "copilot"; }
+          # { name = "cmdline"; }
         ];
 
         mapping = {
-          "<Tab>" = "cmp.mapping.select_next_item()";
-          "<S-Tab>" = "cmp.mapping.select_prev_item()";
           "<Down>" = "cmp.mapping.select_next_item()";
           "<Up>" = "cmp.mapping.select_prev_item()";
-
-          "<CR>" = "cmp.mapping.confirm({ select = false })";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
         };
 
         window = {
