@@ -56,26 +56,26 @@
           };
           tailwindcss.enable = true;
           nil_ls.enable = true;
-          ty.enable = true;
-          # basedpyright = {
-          #   enable = true;
-          #   settings = {
-          #     basedpyright = {
-          #       analysis = {
-          #         autoSearchPaths = true;
-          #         typeCheckingMode = "basic";
-          #         useLibraryCodeForTypes = false;
-          #         diagnosticMode = "openFilesOnly";
-          #         inlayHints = {
-          #           callArgumentNames = true;
-          #           functionReturnTypes = true;
-          #           variableTypes = false;
-          #           genericTypes = true;
-          #         };
-          #       };
-          #     };
-          #   };
-          # };
+          # ty.enable = true;
+          basedpyright = {
+            enable = true;
+            settings = {
+              basedpyright = {
+                analysis = {
+                  autoSearchPaths = true;
+                  typeCheckingMode = "basic";
+                  useLibraryCodeForTypes = false;
+                  diagnosticMode = "openFilesOnly";
+                  inlayHints = {
+                    callArgumentNames = true;
+                    functionReturnTypes = true;
+                    variableTypes = false;
+                    genericTypes = true;
+                  };
+                };
+              };
+            };
+          };
           ruff = {
             enable = true;
             extraOptions = {
