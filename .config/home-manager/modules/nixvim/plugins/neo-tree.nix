@@ -16,14 +16,15 @@
     plugins = {
       neo-tree = {
         enable = true;
+        settings = {
+          window = {
+            width = 30;
+            position = "left";
 
-        window = {
-          width = 30;
-          position = "left";
-
-          mappings = {
-            "l" = "open";
-            "h" = "close_node";
+            mappings = {
+              "l" = "open";
+              "h" = "close_node";
+            };
           };
         };
       };

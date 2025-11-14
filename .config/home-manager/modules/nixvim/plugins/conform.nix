@@ -13,6 +13,7 @@
               "shfmt"
             ];
             python = [ "ruff_fix" "ruff_format" "ruff_organize_imports" ];
+            rust = [ "rustfmt" ];
             javascript = [ "biome" ];
             typescript = [ "biome" ];
             javascriptreact = [ "biome" ];

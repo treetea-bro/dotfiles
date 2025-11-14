@@ -8,7 +8,11 @@
 
   programs.git = {
     enable = true;
-    userName = "peco";
-    userEmail = "sorpwjdafh@naver.com";
+    settings = {
+      user = {
+        name = "peco";
+        email = "sorpwjdafh@naver.com";
+      };
+    };
   };
 }

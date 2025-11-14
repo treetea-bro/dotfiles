@@ -6,8 +6,13 @@
       lsp = {
         enable = true;
         inlayHints = true;
-
         servers = {
+          rust_analyzer = {
+            enable = true;
+            installCargo = true;
+            installRustc = true;
+            installRustfmt = true;
+          };
           vtsls = {
             enable = true;
             extraOptions = {
