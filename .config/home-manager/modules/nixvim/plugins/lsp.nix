@@ -15,8 +15,43 @@
           };
           vtsls = {
             enable = true;
+            # rootMarkers = [ "tsconfig.json" "package.json" ".git"];
             extraOptions = {
+              before_init.__raw = ''
+                function(params, config)
+                  local root = config.root_dir
+
+                  local node_modules = root .. "/node_modules"
+                  local effect_plugin = node_modules .. "/@effect/language-service"
+
+                  config.settings = config.settings or {}
+                  config.settings.vtsls = config.settings.vtsls or {}
+                  config.settings.vtsls.tsserver = config.settings.vtsls.tsserver or {}
+
+                  config.settings.vtsls.tsserver.globalPlugins = {
+                    {
+                      name = "@effect/language-service",
+                      location = effect_plugin,
+                      enableForWorkspaceTypeScriptVersions = true,
+                    }
+                  }
+                end
+              '';
+
               settings = {
+                # vtsls = {
+                #   # tsdk = "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules/typescript/lib";
+                #   tsserver = {
+                #     # pluginPaths = [ "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules" ];
+                #     globalPlugins = [
+                #       {
+                #         name = "@effect/language-service";
+                #         location = "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules/@effect/language-service";
+                #         # enableForWorkspaceTypeScriptVersions = true;
+                #       }
+                #     ];
+                #   };
+                # };
                 typescript = {
                   updateImportsOnFileMove.enabled = "always";
                   # preferences = {
