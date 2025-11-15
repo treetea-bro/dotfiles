@@ -15,7 +15,7 @@
           { name = "nvim_lsp"; }
           { name = "buffer"; }
           { name = "path"; }
-          { name = "copilot"; }
+          # { name = "copilot"; }
           # { name = "cmdline"; }
         ];
 
