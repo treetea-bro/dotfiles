@@ -7,7 +7,7 @@
     ./cmp.nix
     ./conform.nix
     # ./copilot-cmp.nix
-    # ./copilot-lua.nix
+    ./copilot-lua.nix
     ./emmet.nix
     ./flash.nix
     ./friendly-snippets.nix

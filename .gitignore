@@ -5,3 +5,4 @@
 !.config/home-manager/**
 !.config/nix
 !.config/nix/**
+.DS_Store
