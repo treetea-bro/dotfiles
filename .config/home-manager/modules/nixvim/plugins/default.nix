@@ -7,6 +7,7 @@
     ./cmp.nix
     ./conform.nix
     # ./copilot-cmp.nix
+    ./copilot-chat.nix
     ./copilot-lua.nix
     ./emmet.nix
     ./flash.nix
