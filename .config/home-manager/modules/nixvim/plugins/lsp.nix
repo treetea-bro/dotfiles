@@ -92,7 +92,7 @@
                 "json" "css" "html" "markdown"
               ];
 
-              rootMarkers = [ "biome.json" "package.json" ".git" ];
+              rootMarkers = [ "package.json" ".git" ];
           };
           tailwindcss.enable = true;
           nil_ls.enable = true;
