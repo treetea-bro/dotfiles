@@ -105,6 +105,16 @@ lib.mkIf pkgs.stdenv.isDarwin {
           mods = "LEADER",
           action = wezterm.action.ActivatePaneDirection("Right"),
         },
+        {
+          key = 'LeftArrow',
+          mods = 'CTRL|SHIFT',
+          action = wezterm.action.MoveTabRelative(-1)
+        },
+        {
+          key = 'RightArrow',
+          mods = 'CTRL|SHIFT',
+          action = wezterm.action.MoveTabRelative(1)
+        },
       }
 
       -- 상태바에 도메인과 워크스페이스 표시
