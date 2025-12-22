@@ -6,7 +6,7 @@
 - defaults write -g ApplePressAndHoldEnabled -bool false  
 
 ## Linux
-### Open terminal then paste below
+### Open Startup Applications Preferences and add below commend
 - xset r rate 180 60
 
 ## Windows
