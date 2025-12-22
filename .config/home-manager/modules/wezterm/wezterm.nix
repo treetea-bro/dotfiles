@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
-lib.mkIf pkgs.stdenv.isDarwin {
+# lib.mkIf pkgs.stdenv.isDarwin {
+{
   programs.wezterm = {
     enable = true;
     extraConfig = # lua
