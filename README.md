@@ -5,6 +5,10 @@
 - defaults write NSGlobalDomain InitialKeyRepeat -int 12
 - defaults write -g ApplePressAndHoldEnabled -bool false  
 
+## Linux
+### Open terminal then paste below
+- xset r rate 180 60
+
 ## Windows
 ### Open regedit
 1. In address bar paste : HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response
