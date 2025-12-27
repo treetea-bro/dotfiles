@@ -1,25 +1,25 @@
 {
-	"name": "Vimium C",
-	"@time": "9/23/2025, 5:02:12 PM",
-	"time": 1758614532561,
-	"environment": {
-		"extension": "2.12.2",
-		"platform": "mac",
-		"chromium": 139
-	},
-	"keyLayout": 2,
-	"keyMappings": [
-		"#!no-check",
-		"map J goBack",
-		"map K goForward",
-		"map H previousTab",
-		"map L nextTab",
-		"map <a-h> moveTabLeft",
-		"map <a-l> moveTabRight",
-		"",
-		"map s LinkHints.activateHover",
-		""
-	],
-	"vimSync": true
+  "name": "Vimium C",
+  "@time": "9/23/2025, 5:02:12 PM",
+  "time": 1758614532561,
+  "environment": {
+    "extension": "2.12.2",
+    "platform": "mac",
+    "chromium": 139
+  },
+  "keyLayout": 2,
+  "keyMappings": [
+    "#!no-check",
+    "map J goBack",
+    "map K goForward",
+    "map H previousTab",
+    "map L nextTab",
+    "map <a-h> moveTabLeft",
+    "map <a-l> moveTabRight",
+    "",
+    "map a LinkHints.activateHover",
+    "map s LinkHints.activateSelect",
+    ""
+  ],
+  "vimSync": true
 }
-
