@@ -1,4 +1,12 @@
 # Keyboard
+## moergo layout editing (my split keyboard)
+- go to https://my.moergo.com/glove80/ and login
+- click my layouts in top right
+- clone latest edit then change layout keys and build
+- power off all keyboard (left and right)
+- connect left side keyboard with computer then press magic + E button then power on and then upload building file
+- connect right side keyboard with computer then press PgDn + I button then power on and then upload building file
+
 ## Mac
 ### Open terminal then paste below then restart computer to apply
 - defaults write NSGlobalDomain KeyRepeat -int 1
