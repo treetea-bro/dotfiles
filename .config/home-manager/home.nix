@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  home.username = "peco";
-  # home.username = "seungmin";
-  home.homeDirectory = "/Users/peco";
-  # home.homeDirectory = "/home/seungmin";
+  # home.username = "peco";
+  home.username = "seungmin";
+  # home.homeDirectory = "/Users/peco";
+  home.homeDirectory = "/home/seungmin";
 
   home.stateVersion = "25.05";
 
