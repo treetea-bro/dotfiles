@@ -33,8 +33,9 @@
 # Clone
 1. cd ~
 2. git clone git@github.com:treetea-bro/dotfiles.git
-3. rsync -avh --ignore-existing dotfiles/ .
-4. home-manager switch -b backup
+3. rm -rf .config/home-manager/home.nix
+4. rsync -avh --ignore-existing dotfiles/ .
+5. home-manager switch -b backup
 
 # Mac
 1. System Settings > Privacy & Security > Full Disk Access > Enable WezTerm
