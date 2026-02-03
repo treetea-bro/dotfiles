@@ -20,6 +20,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
+      # homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
