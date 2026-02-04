@@ -32,7 +32,7 @@
           ./modules/fzf/fzf.nix
           ./modules/wezterm/wezterm.nix
           ./modules/atuin.nix
-          ./modules/bash.nix
+          # ./modules/bash.nix
           ./modules/direnv.nix
           ./modules/eza.nix
           ./modules/fish.nix
