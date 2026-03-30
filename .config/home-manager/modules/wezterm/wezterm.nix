@@ -30,18 +30,6 @@ lib.mkIf pkgs.stdenv.isDarwin {
           action = wezterm.action.DetachDomain("CurrentPaneDomain"),
         },
         {
-          key = "a",
-          mods = "LEADER",
-          action = wezterm.action_callback(function(window, pane)
-            local current_domain = pane:get_domain_name()
-            if current_domain == "workspace" then
-              window:toast_notification("Info", "Already connected to mux server", nil, 2000)
-            else
-              window:perform_action(wezterm.action.AttachDomain("workspace"), pane)
-            end
-          end),
-        },
-        {
           key = "w",
           mods = "LEADER",
           action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' },
@@ -75,14 +63,19 @@ lib.mkIf pkgs.stdenv.isDarwin {
         },
 
         {
-          key = "-",
+          key = "s",
           mods = "LEADER",
           action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
         },
         {
-          key = "|",
+          key = "v",
           mods = "LEADER",
           action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+        },
+        {
+          key = "q",
+          mods = "LEADER",
+          action = wezterm.action.CloseCurrentPane({ confirm = false }),
         },
 
         {
@@ -105,6 +98,7 @@ lib.mkIf pkgs.stdenv.isDarwin {
           mods = "LEADER",
           action = wezterm.action.ActivatePaneDirection("Right"),
         },
+
         {
           key = 'LeftArrow',
           mods = 'CTRL|SHIFT',
@@ -117,17 +111,25 @@ lib.mkIf pkgs.stdenv.isDarwin {
         },
       }
 
-      -- 상태바에 도메인과 워크스페이스 표시
       wezterm.on("update-right-status", function(window, pane)
+        local status_items = {}
         local workspace = window:active_workspace()
         local domain = pane:get_domain_name()
-        local status = string.format(" [%s] %s ", domain, workspace)
 
-        window:set_right_status(wezterm.format({
-          { Foreground = { Color = domain == "workspace" and "#a3be8c" or "#ebcb8b" } },
-          { Background = { Color = "#2e3440" } },
-          { Text = status },
-        }))
+        -- 리더 키 활성화 여부 확인
+        if window:leader_is_active() then
+          table.insert(status_items, { Foreground = { Color = "#1b1b1b" } })
+          table.insert(status_items, { Background = { Color = "#fabd2f" } })
+          table.insert(status_items, { Text = "  🚀 LEADER  " })
+        end
+
+        -- 도메인 및 워크스페이스 정보
+        local domain_color = (domain == "workspace") and "#a3be8c" or "#ebcb8b"
+        table.insert(status_items, { Foreground = { Color = domain_color } })
+        table.insert(status_items, { Background = { Color = "#2e3440" } })
+        table.insert(status_items, { Text = string.format(" [%s] %s ", domain, workspace) })
+
+        window:set_right_status(wezterm.format(status_items))
       end)
 
       -- 윈도우 종료 확인 설정 (mux 세션 보호)
@@ -223,12 +225,4 @@ lib.mkIf pkgs.stdenv.isDarwin {
     "wezterm/backgrounds/stars.jpg".source = ./backgrounds/stars.jpg;
     "wezterm/colors/PecoArcade.toml".source = ./colors/PecoArcade.toml;
   };
-
-  # home.activation.wezterm-setup = lib.mkIf pkgs.stdenv.isDarwin (
-  #   lib.hm.dag.entryAfter ["writeBoundary"] ''
-  #     if [ ! -e "/Applications/WezTerm.app" ]; then
-  #       $DRY_RUN_CMD ln -sf ~/.nix-profile/Applications/WezTerm.app /Applications/WezTerm.app
-  #     fi
-  #   ''
-  # );
 }
