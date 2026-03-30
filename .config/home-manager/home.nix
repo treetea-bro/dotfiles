@@ -2,15 +2,11 @@
 
 {
   home.username = "peco";
-  # home.username = "seungmin";
   home.homeDirectory = "/Users/peco";
+  # home.username = "seungmin";
   # home.homeDirectory = "/home/seungmin";
 
-  home.stateVersion = "25.05";
-
-  home.file.".ipython/profile_default/ipython_config.py".text = ''
-    c.TerminalInteractiveShell.editing_mode = 'vi'
-  '';
+  home.stateVersion = "25.11";
 
   home.shellAliases = {
     ".." = "cd ..";
@@ -54,12 +50,15 @@
     ch = "clawhub";
   };
 
-  home.packages = with pkgs; [];
-
   home.file = {
     ".ignore" = {
       text = ''
         !.env*
+      '';
+    };
+    ".ipython/profile_default/ipython_config.py" = {
+      text = ''
+        c.TerminalInteractiveShell.editing_mode = 'vi'
       '';
     };
   };
