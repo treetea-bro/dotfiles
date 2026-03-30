@@ -7,12 +7,13 @@
     ./cmp.nix
     ./conform.nix
     # ./copilot-cmp.nix
-    ./copilot-chat.nix
-    ./copilot-lua.nix
+    # ./copilot-chat.nix
+    # ./copilot-lua.nix
     ./emmet.nix
     ./flash.nix
     ./friendly-snippets.nix
     ./grug-far.nix
+    ./illuminate.nix
     ./luasnip.nix
     ./inc-rename.nix
     ./indent-blankline.nix
@@ -21,6 +22,8 @@
     ./lualine.nix
     ./mini-pairs.nix
     ./mini-surround.nix
+    ./nav-buddy.nix
+    ./navic.nix
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix

@@ -48,11 +48,21 @@
     nbc = "pnpm nx build client";
     nbd = "pnpm nx build domain";
     nbs = "pnpm nx build server";
+
+    # openclaw
+    oc = "openclaw";
+    ch = "clawhub";
   };
 
   home.packages = with pkgs; [];
 
-  home.file = { };
+  home.file = {
+    ".ignore" = {
+      text = ''
+        !.env*
+      '';
+    };
+  };
 
   home.sessionVariables = {
     SHELL = "${pkgs.fish}/bin/fish";

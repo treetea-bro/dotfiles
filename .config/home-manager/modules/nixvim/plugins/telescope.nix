@@ -18,8 +18,8 @@
         "gr" = "lsp_references";                  # 참조 찾기
         "gI" = "lsp_implementations";             # 구현부 찾기
         "gy" = "lsp_type_definitions";            # 타입 정의 찾기
-        "<leader>ss" = "lsp_document_symbols";    # 현재 문서 함수/변수/클래스 목록
-        "<leader>sS" = "lsp_workspace_symbols";   # 워크스페이스 전체 심볼 목록
+        # "<leader>ss" = "lsp_document_symbols";    # 현재 문서 함수/변수/클래스 목록
+        # "<leader>sS" = "lsp_workspace_symbols";   # 워크스페이스 전체 심볼 목록
 
         # 기타 유용한 기능
         "<leader>km" = "keymaps";                 # Neovim 키맵 검색
