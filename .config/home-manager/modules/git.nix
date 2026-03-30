@@ -10,8 +10,8 @@
     enable = true;
     settings = {
       user = {
-        name = "peco";
-        email = "sorpwjdafh@naver.com";
+        name = "seungmin";
+        email = "seungmin@maymust.com";
       };
     };
   };

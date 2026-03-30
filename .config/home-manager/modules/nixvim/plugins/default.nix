@@ -6,9 +6,6 @@
     ./bufferline.nix
     ./cmp.nix
     ./conform.nix
-    # ./copilot-cmp.nix
-    # ./copilot-chat.nix
-    # ./copilot-lua.nix
     ./emmet.nix
     ./flash.nix
     ./friendly-snippets.nix
@@ -30,6 +27,7 @@
     ./nvim-osc52.nix
     ./persistence.nix
     ./rainbow-delimiters.nix
+    ./sidekick.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix

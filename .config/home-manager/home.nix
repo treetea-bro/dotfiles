@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "peco";
@@ -6,7 +6,7 @@
   # home.username = "seungmin";
   # home.homeDirectory = "/home/seungmin";
 
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
 
   home.shellAliases = {
     ".." = "cd ..";
@@ -67,6 +67,5 @@
     SHELL = "${pkgs.fish}/bin/fish";
     EDITOR = "nvim";
   };
-
   programs.home-manager.enable = true;
 }
