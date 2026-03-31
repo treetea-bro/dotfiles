@@ -44,11 +44,13 @@
           ./modules/kubernetes-helm.nix
           ./modules/lazygit.nix
           ./modules/nixvim
+          ./modules/man.nix
           ./modules/nerd-font.nix
           ./modules/nodejs.nix
           ./modules/rectangle.nix
           ./modules/ripgrep.nix
           ./modules/yazi.nix
+          ./modules/zellij.nix
           ./modules/zoxide.nix
         ];
       };
