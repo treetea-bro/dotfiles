@@ -15,12 +15,13 @@
 
   outputs = { nixpkgs, home-manager, nixvim, ... }:
     let
-      system = "aarch64-darwin";
+      # system = "aarch64-darwin";
       # system = "x86_64-linux";
+      system = "aarch64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
-      # homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
+      # homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
@@ -36,6 +37,7 @@
           ./modules/direnv.nix
           ./modules/eza.nix
           ./modules/fish.nix
+          ./modules/fx.nix
           ./modules/ghq.nix
           ./modules/git-commitizen.nix
           ./modules/git.nix
