@@ -52,6 +52,7 @@
           ./modules/rectangle.nix
           ./modules/ripgrep.nix
           ./modules/yazi.nix
+          ./modules/zathura.nix
           ./modules/zellij.nix
           ./modules/zoxide.nix
         ];
