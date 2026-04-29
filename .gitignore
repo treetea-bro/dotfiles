@@ -5,4 +5,8 @@
 !.config/home-manager/**
 !.config/nix
 !.config/nix/**
+!.claude
+!.claude/CLAUDE.md
+!.claude/skills
+!.claude/skills/**
 .DS_Store
