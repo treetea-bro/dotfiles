@@ -34,6 +34,8 @@
           ./modules/wezterm/wezterm.nix
           ./modules/atuin.nix
           ./modules/bash.nix
+          ./modules/carapace.nix
+          ./modules/claude-code.nix
           ./modules/direnv.nix
           ./modules/eza.nix
           ./modules/fish.nix
