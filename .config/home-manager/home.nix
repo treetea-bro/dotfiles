@@ -13,6 +13,7 @@
     "..." = "cd ../..";
     v = "nvim";
     k = "kubectl";
+    p = "pi";
 
     # google cloud
     gc = "gcloud";
@@ -32,11 +33,6 @@
     nd = "nix develop -c $SHELL";
     ndo = "nix develop --offline --command $SHELL";
     ncg = "nix-collect-garbage";
-
-    # pnpm
-    p = "pnpm";
-    pi = "pnpm install";
-
     # pnpm monorepo
     ndc = "pnpm nx dev client";
     nds = "pnpm nx dev server";

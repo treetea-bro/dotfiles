@@ -7,18 +7,23 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    llm-agents.url = "github:numtide/llm-agents.nix";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }:
+  outputs = { nixpkgs, home-manager, nixvim, llm-agents, ... }:
     let
       # system = "aarch64-darwin";
       # system = "x86_64-linux";
       system = "aarch64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ llm-agents.overlays.default ];
+        config.allowUnfree = true;
+      };
     in {
       # homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
       homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
@@ -35,7 +40,7 @@
           ./modules/atuin.nix
           ./modules/bash.nix
           ./modules/carapace.nix
-          ./modules/claude-code.nix
+          ./modules/llm-agents.nix
           ./modules/direnv.nix
           ./modules/eza.nix
           ./modules/fish.nix

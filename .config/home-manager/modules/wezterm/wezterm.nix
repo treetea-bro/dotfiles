@@ -182,7 +182,7 @@ lib.mkIf pkgs.stdenv.isDarwin {
       })
       config.font_size = 16.00
       config.line_height = 1.16
-      config.warn_about_missing_glyphs = true
+      config.warn_about_missing_glyphs = false
       config.freetype_load_target = "HorizontalLcd"
 
       config.underline_position = -6
