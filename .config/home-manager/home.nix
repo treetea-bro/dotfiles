@@ -1,10 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
-  # home.username = "peco";
-  # home.homeDirectory = "/Users/peco";
-  home.username = "seungmin";
-  home.homeDirectory = "/home/seungmin";
+  home.username = "peco";
+  home.homeDirectory = "/Users/peco";
+  # home.username = "seungmin";
+  # home.homeDirectory = "/home/seungmin";
 
   home.stateVersion = "26.05";
 
@@ -40,10 +40,6 @@
     nbc = "pnpm nx build client";
     nbd = "pnpm nx build domain";
     nbs = "pnpm nx build server";
-
-    # openclaw
-    oc = "openclaw";
-    ch = "clawhub";
   };
 
   home.file = {

@@ -16,17 +16,17 @@
 
   outputs = { nixpkgs, home-manager, nixvim, llm-agents, ... }:
     let
-      # system = "aarch64-darwin";
+      system = "aarch64-darwin";
       # system = "x86_64-linux";
-      system = "aarch64-linux";
+      # system = "aarch64-linux";
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ llm-agents.overlays.default ];
         config.allowUnfree = true;
       };
     in {
-      # homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
-      homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations."peco" = home-manager.lib.homeManagerConfiguration {
+      # homeConfigurations."seungmin" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         modules = [
@@ -56,7 +56,7 @@
           ./modules/man.nix
           ./modules/nerd-font.nix
           ./modules/nodejs.nix
-          ./modules/rectangle.nix
+          # ./modules/rectangle.nix
           ./modules/ripgrep.nix
           ./modules/yazi.nix
           ./modules/zathura.nix

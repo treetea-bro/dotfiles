@@ -7,7 +7,8 @@ lib.mkIf pkgs.stdenv.isDarwin {
       ''
       local wezterm = require("wezterm")
       local config = wezterm.config_builder()
-
+      -- config.enable_kitty_keyboard = true
+      config.term = "wezterm"
       config.unix_domains = {
         {
           name = "workspace",
@@ -19,6 +20,11 @@ lib.mkIf pkgs.stdenv.isDarwin {
       config.leader = { key = 'l', mods = 'SUPER', timeout_milliseconds = 2000 }
 
       config.keys = {
+        {
+          key = "Enter",
+          mods = "ALT",
+          action = wezterm.action.DisableDefaultAssignment,
+        },
         {
           key = "l",
           mods = "SUPER",
