@@ -64,5 +64,10 @@
           ./modules/zoxide.nix
         ];
       };
+
+      templates.default = {
+        path = ./templates/default;
+        description = "Basic Nix dev shell with direnv";
+      };
     };
 }

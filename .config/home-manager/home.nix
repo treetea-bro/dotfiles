@@ -33,6 +33,7 @@
     nd = "nix develop -c $SHELL";
     ndo = "nix develop --offline --command $SHELL";
     ncg = "nix-collect-garbage";
+    mkflake = "nix flake init -t ~/.config/home-manager; and gh api /gitignore/templates/Nix --jq .source >> .gitignore; and git add flake.nix .envrc .gitignore; and direnv allow";
     # pnpm monorepo
     ndc = "pnpm nx dev client";
     nds = "pnpm nx dev server";
