@@ -67,7 +67,7 @@
         };
 
         "seungmin" = home-manager.lib.homeManagerConfiguration {
-          pkgs = mkPkgs "x86_64-linux";
+          pkgs = mkPkgs "aarch64-linux";
           modules = commonModules ++ [
             {
               home.username = "seungmin";
