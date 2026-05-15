@@ -41,6 +41,7 @@
         ./modules/ghq.nix
         ./modules/git-commitizen.nix
         ./modules/git.nix
+        ./modules/go.nix
         ./modules/karabiner.nix
         ./modules/kubernetes-helm.nix
         ./modules/lazygit.nix

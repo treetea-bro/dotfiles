@@ -2,8 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    nodejs
-    pnpm
-    bun
+    go
+    air
   ];
 }

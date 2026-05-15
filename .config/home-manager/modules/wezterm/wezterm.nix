@@ -8,7 +8,6 @@ lib.mkIf pkgs.stdenv.isDarwin {
       local wezterm = require("wezterm")
       local config = wezterm.config_builder()
       -- config.enable_kitty_keyboard = true
-      config.term = "wezterm"
       config.unix_domains = {
         {
           name = "workspace",
@@ -185,6 +184,9 @@ lib.mkIf pkgs.stdenv.isDarwin {
           style = "Normal",
           harfbuzz_features = ligature_features,
         },
+        { family = "NanumGothicCoding" },
+        { family = "Pretendard" },
+        { family = "Noto Sans CJK KR" },
       })
       config.font_size = 16.00
       config.line_height = 1.16
