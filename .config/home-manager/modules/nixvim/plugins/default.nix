@@ -17,6 +17,7 @@
     ./lazygit.nix
     ./lsp.nix
     ./lualine.nix
+    ./markdown-preview.nix
     ./mini-pairs.nix
     ./mini-surround.nix
     ./nav-buddy.nix
