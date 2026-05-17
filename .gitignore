@@ -9,4 +9,11 @@
 !.claude/CLAUDE.md
 !.claude/skills
 !.claude/skills/**
+!.pi
+!.pi/agent
+!.pi/agent/package.json
+!.pi/agent/pnpm-lock.yaml
+!.pi/agent/settings.json
+!.pi/agent/extensions
+!.pi/agent/extensions/**
 .DS_Store
