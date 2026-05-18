@@ -9,6 +9,7 @@
   "theme": "dark",
   "hideThinkingBlock": false,
   "packages": [
-    "npm:pi-web-access"
+    "npm:pi-web-access",
+    "npm:context-mode"
   ]
 }
