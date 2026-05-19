@@ -40,6 +40,11 @@
       dockerfile
       gitignore
       sql
+
+      go
+      gomod
+      gosum
+      gowork
     ];
     };
   };

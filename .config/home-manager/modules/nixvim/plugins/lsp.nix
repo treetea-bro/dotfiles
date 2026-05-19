@@ -144,6 +144,35 @@
           };
           dockerls.enable = true;
           docker_compose_language_service.enable = true;
+          gopls = {
+            enable = true;
+            extraOptions = {
+              settings = {
+                gopls = {
+                  gofumpt = true;
+                  staticcheck = true;
+                  usePlaceholders = true;
+                  completeUnimported = true;
+                  analyses = {
+                    unusedparams = true;
+                    shadow = true;
+                    nilness = true;
+                    unusedwrite = true;
+                    useany = true;
+                  };
+                  hints = {
+                    assignVariableTypes = true;
+                    compositeLiteralFields = true;
+                    compositeLiteralTypes = true;
+                    constantValues = true;
+                    functionTypeParameters = true;
+                    parameterNames = true;
+                    rangeVariableTypes = true;
+                  };
+                };
+              };
+            };
+          };
         };
 
         keymaps = {

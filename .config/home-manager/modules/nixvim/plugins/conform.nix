@@ -14,6 +14,7 @@
             ];
             python = [ "ruff_fix" "ruff_format" "ruff_organize_imports" ];
             rust = [ "rustfmt" ];
+            go = [ "goimports" "gofumpt" ];
             javascript = [ "biome" ];
             typescript = [ "biome" ];
             javascriptreact = [ "biome" ];
