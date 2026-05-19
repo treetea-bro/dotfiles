@@ -10,6 +10,7 @@
   "hideThinkingBlock": false,
   "packages": [
     "npm:pi-web-access",
-    "npm:context-mode"
+    "npm:context-mode",
+    "npm:pi-subagents"
   ]
 }
