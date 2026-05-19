@@ -5,11 +5,14 @@ let
   piPackages = [
     "npm:pi-web-access@0.10.7"
     "npm:context-mode@1.0.136"
+    "npm:pi-subagents"
   ];
   npmGlobalPackages = [
     "pi-web-access@0.10.7"
     "context-mode@1.0.136"
+    "pi-subagents"
   ];
+  piPackagesJson = builtins.toJSON piPackages;
 in
 {
   home.packages = with pkgs.llm-agents; [
@@ -17,9 +20,18 @@ in
     claude-code
   ];
 
-  home.file.".pi/agent/settings.json".text = builtins.toJSON {
-    packages = piPackages;
-  } + "\n";
+  home.activation.writePiAgentSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    settingsFile="${config.home.homeDirectory}/.pi/agent/settings.json"
+    ${pkgs.coreutils}/bin/mkdir -p "$(${pkgs.coreutils}/bin/dirname "$settingsFile")"
+    desired='${piPackagesJson}'
+    if [ ! -f "$settingsFile" ]; then
+      printf '%s\n' "{\"packages\":$desired}" > "$settingsFile"
+    else
+      tmp="$(${pkgs.coreutils}/bin/mktemp)"
+      ${pkgs.jq}/bin/jq --argjson pkgs "$desired" '.packages = $pkgs' "$settingsFile" > "$tmp"
+      ${pkgs.coreutils}/bin/mv "$tmp" "$settingsFile"
+    fi
+  '';
 
   home.activation.installPiNpmPackages = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     export NPM_CONFIG_PREFIX="${npmPrefix}"
