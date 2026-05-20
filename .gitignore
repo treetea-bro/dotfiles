@@ -17,3 +17,4 @@
 !.pi/agent/extensions
 !.pi/agent/extensions/**
 .DS_Store
+flake.lock
