@@ -11,6 +11,6 @@
   "packages": [
     "npm:pi-web-access@latest",
     "npm:context-mode@latest",
-    "npm:pi-subagents"
+    "npm:pi-subagents@latest"
   ]
 }

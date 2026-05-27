@@ -5,12 +5,12 @@ let
   piPackages = [
     "npm:pi-web-access@latest"
     "npm:context-mode@latest"
-    "npm:pi-subagents"
+    "npm:pi-subagents@latest"
   ];
   npmGlobalPackages = [
     "pi-web-access@latest"
     "context-mode@latest"
-    "pi-subagents"
+    "pi-subagents@latest"
   ];
   piPackagesJson = builtins.toJSON piPackages;
 in
