@@ -3,13 +3,13 @@
 let
   npmPrefix = "${config.home.homeDirectory}/.npm-global";
   piPackages = [
-    "npm:pi-web-access@0.10.7"
-    "npm:context-mode@1.0.136"
+    "npm:pi-web-access@latest"
+    "npm:context-mode@latest"
     "npm:pi-subagents"
   ];
   npmGlobalPackages = [
-    "pi-web-access@0.10.7"
-    "context-mode@1.0.136"
+    "pi-web-access@latest"
+    "context-mode@latest"
     "pi-subagents"
   ];
   piPackagesJson = builtins.toJSON piPackages;
