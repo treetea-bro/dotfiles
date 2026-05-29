@@ -5,10 +5,6 @@
 !.config/home-manager/**
 !.config/nix
 !.config/nix/**
-!.claude
-!.claude/CLAUDE.md
-!.claude/skills
-!.claude/skills/**
 !.pi
 !.pi/agent
 !.pi/agent/package.json
