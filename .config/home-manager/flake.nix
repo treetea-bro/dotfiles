@@ -75,6 +75,16 @@
             }
           ];
         };
+
+        "lsm" = home-manager.lib.homeManagerConfiguration {
+          pkgs = mkPkgs "x86_64-linux";
+          modules = commonModules ++ [
+            {
+              home.username = "lsm";
+              home.homeDirectory = "/home/lsm";
+            }
+          ];
+        };
       };
 
       templates.default = {
