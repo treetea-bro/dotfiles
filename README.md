@@ -36,7 +36,7 @@
 3. rm -rf .config/home-manager/home.nix
 4. rsync -avh --ignore-existing dotfiles/ .
 5. cd ~/.config/home-manager
-6. nix run github:nix-community/home-manager -- switch --flake .#<username> -b backup
+6. nix run github:nix-community/home-manager -- switch -b backup
 
 # Mac
 1. System Settings > Privacy & Security > Full Disk Access > Enable WezTerm
