@@ -82,6 +82,41 @@
     }
 
     {
+      mode = "n";
+      key = "<leader>yp";
+      action.__raw = ''
+        function()
+          local path = vim.fn.expand("%")
+          if path == "" then
+            vim.notify("No file name for current buffer", vim.log.levels.WARN)
+            return
+          end
+          vim.fn.setreg("+", path)
+          vim.fn.setreg('"', path)
+          vim.notify("Copied relative path: " .. path)
+        end
+      '';
+      options.desc = "Copy current buffer relative path";
+    }
+    {
+      mode = "n";
+      key = "<leader>yP";
+      action.__raw = ''
+        function()
+          local path = vim.fn.expand("%:p")
+          if path == "" then
+            vim.notify("No file name for current buffer", vim.log.levels.WARN)
+            return
+          end
+          vim.fn.setreg("+", path)
+          vim.fn.setreg('"', path)
+          vim.notify("Copied absolute path: " .. path)
+        end
+      '';
+      options.desc = "Copy current buffer absolute path";
+    }
+
+    {
       mode = "x";
       key = ">";
       action = ">gv";

@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.75.5",
+  "lastChangelogVersion": "0.79.4",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "medium",
@@ -9,8 +9,8 @@
   "theme": "dark",
   "hideThinkingBlock": false,
   "packages": [
-    "npm:pi-web-access@latest",
-    "npm:context-mode@latest",
-    "npm:pi-subagents@latest"
+    "npm:pi-web-access",
+    "npm:context-mode",
+    "npm:pi-subagents"
   ]
 }

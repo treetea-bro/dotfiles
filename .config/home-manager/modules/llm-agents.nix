@@ -3,14 +3,14 @@
 let
   npmPrefix = "${config.home.homeDirectory}/.npm-global";
   piPackages = [
-    "npm:pi-web-access@latest"
-    "npm:context-mode@latest"
-    "npm:pi-subagents@latest"
+    "npm:pi-web-access"
+    "npm:context-mode"
+    "npm:pi-subagents"
   ];
   npmGlobalPackages = [
-    "pi-web-access@latest"
-    "context-mode@latest"
-    "pi-subagents@latest"
+    "pi-web-access"
+    "context-mode"
+    "pi-subagents"
   ];
   piPackagesJson = builtins.toJSON piPackages;
 in
@@ -18,6 +18,7 @@ in
   home.packages = with pkgs.llm-agents; [
     pi
     claude-code
+    codex
   ];
 
   home.activation.writePiAgentSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
