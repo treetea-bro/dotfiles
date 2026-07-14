@@ -17,7 +17,7 @@
     let
       mkPkgs = system: import nixpkgs {
         inherit system;
-        overlays = [ llm-agents.overlays.default ];
+        overlays = [ llm-agents.overlays.shared-nixpkgs ];
         config.allowUnfree = true;
       };
 
