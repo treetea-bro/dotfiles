@@ -18,7 +18,6 @@ in
   home.packages = with pkgs.llm-agents; [
     pi
     claude-code
-    codex
   ];
 
   home.activation.writePiAgentSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
