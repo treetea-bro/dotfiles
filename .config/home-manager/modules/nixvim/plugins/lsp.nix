@@ -95,7 +95,15 @@
               rootMarkers = [ "package.json" ".git" ];
           };
           tailwindcss.enable = true;
-          nil_ls.enable = true;
+          nil_ls = {
+            enable = true;
+            settings = {
+              # nil 이 flake 입력이 store 에 없을 때 `nix flake archive` 실행 여부를
+              # showMessageRequest 로 매번 물어본다. false 로 두면 묻지 않고
+              # 없는 입력은 무시한다 (true 로 하면 자동으로 fetch).
+              nix.flake.autoArchive = false;
+            };
+          };
           # ty.enable = true;
           basedpyright = {
             enable = true;
