@@ -19,6 +19,7 @@
         inherit system;
         overlays = [ llm-agents.overlays.shared-nixpkgs ];
         config.allowUnfree = true;
+        config.nvidia.acceptLicense = true;
       };
 
       commonModules = [
@@ -68,10 +69,23 @@
 
         "seungmin" = home-manager.lib.homeManagerConfiguration {
           pkgs = mkPkgs "aarch64-linux";
+
           modules = commonModules ++ [
             {
               home.username = "seungmin";
               home.homeDirectory = "/home/seungmin";
+
+              targets.genericLinux.enable = true;
+
+              targets.genericLinux.gpu = {
+                enable = true;
+
+                nvidia = {
+                  enable = true;
+                  version = "580.173.02";
+                  sha256 = "sha256-1lvVYIfvTXjwSoCNp4g8NaWQHF/TfpXRUKdgLrqXqoA=";
+                };
+              };
             }
           ];
         };
