@@ -3,10 +3,10 @@
 lib.mkIf pkgs.stdenv.isDarwin {
   programs.brave = {
     enable = true;
+    extensions = [
+      {
+        id = "hfjbmagddngcpeloejdejnfgbamkjaeg";
+      }
+    ];
   };
-  extensions = [
-    {
-      id = "hfjbmagddngcpeloejdejnfgbamkjaeg";
-    }
-  ];
 }
