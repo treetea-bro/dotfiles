@@ -2,14 +2,14 @@
   description = "Home Manager configuration of peco / seungmin";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-26.05";
+      url = "github:nix-community/nixvim/main";
     };
   };
 
