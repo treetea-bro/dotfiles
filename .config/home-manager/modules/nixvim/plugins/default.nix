@@ -2,9 +2,9 @@
 
 {
   imports = [
+    ./blink-cmp.nix
     ./bufdelete.nix
     ./bufferline.nix
-    ./cmp.nix
     ./conform.nix
     ./emmet.nix
     ./flash.nix
