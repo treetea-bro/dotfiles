@@ -20,6 +20,27 @@ in
     claude-code
   ];
 
+  programs.codex = {
+    enable = true;
+    package = pkgs.llm-agents.codex;
+
+    settings = {
+      model = "gpt-5.6-sol";
+      model_reasoning_effort = "medium";
+
+      approval_policy = "never";
+      sandbox_mode = "danger-full-access";
+
+      notice.hide_full_access_warning = true;
+
+      projects = {
+        "${config.home.homeDirectory}/ghq/github-maymust/MayMustAI/agenticAI" = {
+          trust_level = "trusted";
+        };
+      };
+    };
+  };
+
   home.activation.writePiAgentSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     settingsFile="${config.home.homeDirectory}/.pi/agent/settings.json"
     ${pkgs.coreutils}/bin/mkdir -p "$(${pkgs.coreutils}/bin/dirname "$settingsFile")"
