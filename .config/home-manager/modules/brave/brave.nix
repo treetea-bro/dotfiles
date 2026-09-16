@@ -10,6 +10,9 @@ lib.mkIf pkgs.stdenv.isDarwin {
       {
         id = "aapbdbdomjkkjkaonfhkkikfgjllcleb";
       }
+      {
+        id = "fmkadmapgofadopljbjfkapdkoienihi";
+      }
     ];
   };
 }
