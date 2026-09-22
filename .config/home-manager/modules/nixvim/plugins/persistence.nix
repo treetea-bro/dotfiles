@@ -19,6 +19,21 @@
         return vim.uv.getuid() == 0
       end
 
+      -- 없어진 파일은 arglist에서 빼둔다. 그대로 두면 세션에 $argadd로 남아
+      -- 매번 빈 버퍼로 되살아난다.
+      local function prune_missing_args()
+        for i = vim.fn.argc() - 1, 0, -1 do
+          local name = vim.fn.argv(i)
+          if name ~= "" and vim.fn.filereadable(vim.fn.fnamemodify(name, ":p")) == 0 then
+            vim.cmd("silent! argdelete " .. vim.fn.fnameescape(name))
+            local buf = vim.fn.bufnr(name)
+            if buf ~= -1 and not vim.bo[buf].modified then
+              vim.api.nvim_buf_delete(buf, { force = true })
+            end
+          end
+        end
+      end
+
       -- 세션 저장: neo-tree 버퍼 제거 후 저장
       vim.api.nvim_create_autocmd("VimLeavePre", {
         group = vim.api.nvim_create_augroup("persistence_save", { clear = true }),
@@ -31,6 +46,7 @@
               vim.api.nvim_buf_delete(buf, { force = true })
             end
           end
+          prune_missing_args()
           require("persistence").save()
         end,
       })
@@ -53,6 +69,7 @@
       vim.api.nvim_create_autocmd("User", {
         pattern = "PersistenceLoadPost",
         callback = function()
+          prune_missing_args()
           vim.cmd("silent! filetype detect")
           vim.cmd("silent! syntax enable")
         end,
