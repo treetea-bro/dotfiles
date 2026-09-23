@@ -50,6 +50,7 @@
         ./modules/nerd-font.nix
         ./modules/nodejs.nix
         ./modules/ripgrep.nix
+        ./modules/rust.nix
         ./modules/yazi.nix
         ./modules/zathura.nix
         ./modules/zellij.nix
