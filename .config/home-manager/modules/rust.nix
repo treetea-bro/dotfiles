@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     cargo
     rustc
+    clippy
   ];
 
   home.sessionPath = [
