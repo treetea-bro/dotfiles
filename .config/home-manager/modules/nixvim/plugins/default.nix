@@ -3,7 +3,6 @@
 {
   imports = [
     ./blink-cmp.nix
-    ./bufdelete.nix
     ./bufferline.nix
     ./conform.nix
     ./emmet.nix
@@ -25,7 +24,7 @@
     ./neo-tree.nix
     ./noice.nix
     ./notify.nix
-    ./nvim-osc52.nix
+    ./osc52.nix
     ./persistence.nix
     ./rainbow-delimiters.nix
     ./sidekick.nix

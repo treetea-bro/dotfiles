@@ -8,8 +8,12 @@
 
     grammarPackages = with config.programs.nixvim.plugins.treesitter.package.builtGrammars; [
       bash
+      c
+      diff
+      fish
       json
       lua
+      make
       markdown
       nix
       regex
@@ -35,6 +39,8 @@
 
       dockerfile
       gitignore
+      proto
+      rust
       sql
 
       go

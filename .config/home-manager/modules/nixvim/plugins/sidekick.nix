@@ -2,6 +2,8 @@
 
 {
   programs.nixvim = {
+    # nixvim 은 자체 pkgs 인스턴스를 쓰므로 copilot-language-server(unfree)를
+    # 받으려면 여기서 따로 허용해야 한다.
     nixpkgs.config.allowUnfree = true;
 
     plugins = {
@@ -9,8 +11,9 @@
         enable = true;
         settings = {
           toggle = { enabled = true; };
-          notifier = { enabled = true; };
-          picker = { enabled = true; };
+          # 알림은 noice + nvim-notify 가, 피커는 telescope 가 담당한다.
+          notifier = { enabled = false; };
+          picker = { enabled = false; };
         };
       };
 

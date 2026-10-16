@@ -8,9 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
-    nixvim = {
-      url = "github:nix-community/nixvim/main";
-    };
+    # nixvim 은 자신이 핀한 nixpkgs 와 함께 써야 한다.
+    # inputs.nixpkgs.follows 를 걸면 업스트림이 경고를 낸다.
+    nixvim.url = "github:nix-community/nixvim/main";
   };
 
   outputs = { nixpkgs, home-manager, nixvim, llm-agents, ... }:
@@ -26,18 +26,18 @@
         nixvim.homeModules.nixvim
         ./home.nix
         ./modules/brave/brave.nix
-        ./modules/fzf/bat.nix
-        ./modules/fzf/fd.nix
-        ./modules/fzf/fzf.nix
         ./modules/wezterm/wezterm.nix
         ./modules/atuin.nix
         ./modules/bash.nix
+        ./modules/bat.nix
         ./modules/carapace.nix
         ./modules/llm-agents.nix
         ./modules/direnv.nix
         ./modules/eza.nix
+        ./modules/fd.nix
         ./modules/fish.nix
         ./modules/fx.nix
+        ./modules/fzf.nix
         ./modules/ghq.nix
         ./modules/git-commitizen.nix
         ./modules/git.nix
@@ -53,7 +53,6 @@
         ./modules/rust.nix
         ./modules/yazi.nix
         ./modules/zathura.nix
-        ./modules/zellij.nix
         ./modules/zoxide.nix
       ];
     in {

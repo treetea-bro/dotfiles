@@ -47,8 +47,8 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = "<cmd>bdelete<cr>";
-      options.desc = "Delete current buffer";
+      action = "<cmd>lua Snacks.bufdelete()<cr>";
+      options.desc = "Delete buffer but keep window";
     }
     {
       mode = "n";
@@ -68,19 +68,6 @@
       action = "<cmd>.+1,$bd<cr>";
       options.desc = "Delete buffers to the right";
     }
-    {
-      mode = "n";
-      key = "<S-l>";
-      action = "<cmd>bnext<cr>";
-      options.desc = "Next buffer";
-    }
-    {
-      mode = "n";
-      key = "<S-h>";
-      action = "<cmd>bprev<cr>";
-      options.desc = "Previous buffer";
-    }
-
     {
       mode = "n";
       key = "<leader>yp";

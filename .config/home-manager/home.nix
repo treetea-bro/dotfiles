@@ -8,10 +8,6 @@
     "..." = "cd ../..";
     v = "nvim";
     k = "kubectl";
-    p = "pi";
-
-    # google cloud
-    gc = "gcloud";
 
     # git
     g = "git";
@@ -29,13 +25,6 @@
     ndo = "nix develop --offline --command $SHELL";
     ncg = "nix-collect-garbage";
     mkflake = "nix flake init -t ~/.config/home-manager; and gh api /gitignore/templates/Nix --jq .source >> .gitignore; and git add flake.nix .envrc .gitignore; and direnv allow";
-    # pnpm monorepo
-    ndc = "pnpm nx dev client";
-    nds = "pnpm nx dev server";
-    ndss = "pnpm nx db:studio server";
-    nbc = "pnpm nx build client";
-    nbd = "pnpm nx build domain";
-    nbs = "pnpm nx build server";
   };
 
   home.file = {

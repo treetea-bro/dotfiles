@@ -15,7 +15,6 @@
           };
           vtsls = {
             enable = true;
-            # rootMarkers = [ "tsconfig.json" "package.json" ".git"];
             extraOptions = {
               before_init.__raw = ''
                 function(params, config)
@@ -39,33 +38,10 @@
               '';
 
               settings = {
-                # vtsls = {
-                #   # tsdk = "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules/typescript/lib";
-                #   tsserver = {
-                #     # pluginPaths = [ "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules" ];
-                #     globalPlugins = [
-                #       {
-                #         name = "@effect/language-service";
-                #         location = "/Users/peco/ghq/bitbucket.org/maymust_ai_sw/effect-app/node_modules/@effect/language-service";
-                #         # enableForWorkspaceTypeScriptVersions = true;
-                #       }
-                #     ];
-                #   };
-                # };
                 typescript = {
                   updateImportsOnFileMove.enabled = "always";
-                  # preferences = {
-                  #   importModuleSpecifier = "relative";
-                  #   quoteStyle = "single";
-                  #   allowRenameOfImportPath = true;
-                  # };
                   suggest = {
                     completeFunctionCalls = true;
-                    # completeUnimported = true;
-                    # autoImports = true;
-                    # includePackageJsonAutoImports = "auto";
-                    # classMemberSnippets = { enabled = true; };
-                    # objectLiteralMethodSnippets = { enabled = true; };
                   };
                   inlayHints = {
                     parameterNames.enabled = "all";
@@ -75,9 +51,6 @@
                     propertyDeclarationTypes.enabled = true;
                     enumMemberValues.enabled = true;
                   };
-
-                  # implementationsCodeLens = { enabled = true; };
-                  # referencesCodeLens = { enabled = true; };
                 };
               };
             };
@@ -89,7 +62,7 @@
               filetypes = [
                 "javascript" "javascriptreact"
                 "typescript" "typescriptreact"
-                "json" "css" "html" "markdown"
+                "json" "css"
               ];
 
               rootMarkers = [ "package.json" ".git" ];
@@ -104,7 +77,6 @@
               nix.flake.autoArchive = false;
             };
           };
-          # ty.enable = true;
           basedpyright = {
             enable = true;
             settings = {
@@ -135,9 +107,6 @@
                   lint = {
                     # E402만 끄기
                     ignore = [ "E402" ];
-
-                    # 만약 E4 전체(Import 관련) 끄고 싶으면:
-                    # ignore = [ "E4" ];
                   };
                 };
               };

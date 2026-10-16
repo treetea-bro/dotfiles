@@ -74,15 +74,6 @@
           vim.cmd("silent! syntax enable")
         end,
       })
-
-      -- commentstring 비어있으면 기본값 설정
-      vim.api.nvim_create_autocmd("BufEnter", {
-        callback = function()
-          if vim.bo.commentstring == "" then
-            vim.bo.commentstring = "# %s"
-          end
-        end,
-      })
     '';
   };
 }

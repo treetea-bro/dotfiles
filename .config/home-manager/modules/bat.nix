@@ -2,6 +2,6 @@
 
 {
   programs.bat = {
-		enable = true;
+    enable = true;
   };
 }

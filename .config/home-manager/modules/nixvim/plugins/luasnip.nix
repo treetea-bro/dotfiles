@@ -11,61 +11,35 @@
       local i = ls.insert_node
       local f = ls.function_node
 
-      local function filename_as_is(_, snip)
+      local function filename_as_is()
         return vim.fn.expand("%:t:r")
       end
 
-      ls.add_snippets("javascriptreact", {
-        s("comp", {
+      -- React 컴포넌트 뼈대. compt 는 className 자리까지 같이 만든다.
+      local function component(with_class)
+        local open = with_class
+          and { t({ "", "    <div className=\"" }), i(1), t({ "\">" }) }
+          or { t({ "", "    <div>" }) }
+
+        local nodes = {
           t("const "), f(filename_as_is, {}), t(" = () => {"),
           t({ "", "  return (" }),
-          t({ "", "    <div>" }),
+        }
+        vim.list_extend(nodes, open)
+        vim.list_extend(nodes, {
           i(0),
           t({ "", "    </div>" }),
           t({ "", "  )", "}", "", "export default " }), f(filename_as_is, {}),
-        }),
+        })
+        return nodes
+      end
 
-        s("compt", {
-          t("const "), f(filename_as_is, {}), t(" = () => {"),
-          t({ "", "  return (" }),
-          t({ "", "    <div className=\"" }), i(1), t({ "\">" }),
-          i(0),
-          t({ "", "    </div>" }),
-          t({ "", "  )", "}", "", "export default " }), f(filename_as_is, {}),
-        }),
-
-        -- s("divt", {
-        --   t("<div className=\""), i(1), t({ "\">" }),
-        --   i(0),
-        --   t({ "", "</div>" }),
-        -- }),
-      })
-
-      ls.add_snippets("typescriptreact", {
-        s("comp", {
-          t("const "), f(filename_as_is, {}), t(" = () => {"),
-          t({ "", "  return (" }),
-          t({ "", "    <div>" }),
-          i(0),
-          t({ "", "    </div>" }),
-          t({ "", "  )", "}", "", "export default " }), f(filename_as_is, {}),
-        }),
-
-        s("compt", {
-          t("const "), f(filename_as_is, {}), t(" = () => {"),
-          t({ "", "  return (" }),
-          t({ "", "    <div className=\"" }), i(1), t({ "\">" }),
-          i(0),
-          t({ "", "    </div>" }),
-          t({ "", "  )", "}", "", "export default " }), f(filename_as_is, {}),
-        }),
-
-        -- s("divt", {
-        --   t("<div className=\""), i(1), t({ "\">" }),
-        --   i(0),
-        --   t({ "", "</div>" }),
-        -- }),
-      })
+      for _, ft in ipairs({ "javascriptreact", "typescriptreact" }) do
+        ls.add_snippets(ft, {
+          s("comp", component(false)),
+          s("compt", component(true)),
+        })
+      end
     '';
   };
 }
