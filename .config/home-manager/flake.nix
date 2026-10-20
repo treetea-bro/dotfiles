@@ -31,7 +31,7 @@
         ./modules/bash.nix
         ./modules/bat.nix
         ./modules/carapace.nix
-        ./modules/llm-agents.nix
+        # ./modules/llm-agents.nix
         ./modules/direnv.nix
         ./modules/eza.nix
         ./modules/fd.nix
