@@ -56,16 +56,22 @@
             };
           };
           biome = {
-              enable = true;
-              # nixpkgs biome 쓰되, 로컬 node_modules biome이 있으면 그거 우선
-              packageFallback = true;
-              filetypes = [
-                "javascript" "javascriptreact"
-                "typescript" "typescriptreact"
-                "json" "css"
-              ];
+            enable = true;
+            # nixpkgs biome 쓰되, 로컬 node_modules biome이 있으면 그거 우선
+            packageFallback = true;
+            filetypes = [
+              "javascript"
+              "javascriptreact"
+              "typescript"
+              "typescriptreact"
+              "json"
+              "css"
+            ];
 
-              rootMarkers = [ "package.json" ".git" ];
+            rootMarkers = [
+              "package.json"
+              ".git"
+            ];
           };
           tailwindcss.enable = true;
           nil_ls = {
@@ -121,6 +127,8 @@
           };
 
           buf_ls.enable = true;
+
+          clangd.enable = true;
 
           dockerls.enable = true;
           docker_compose_language_service.enable = true;

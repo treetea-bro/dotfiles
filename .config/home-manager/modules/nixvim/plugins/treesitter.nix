@@ -9,6 +9,8 @@
     grammarPackages = with config.programs.nixvim.plugins.treesitter.package.builtGrammars; [
       bash
       c
+      cpp
+      cuda
       diff
       fish
       json
