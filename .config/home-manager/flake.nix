@@ -7,31 +7,36 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    llm-agents.url = "github:numtide/llm-agents.nix";
-    # nixvim 은 자신이 핀한 nixpkgs 와 함께 써야 한다.
-    # inputs.nixpkgs.follows 를 걸면 업스트림이 경고를 낸다.
     nixvim.url = "github:nix-community/nixvim/main";
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, llm-agents, ... }:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nixvim,
+      ...
+    }:
     let
-      mkPkgs = system: import nixpkgs {
-        inherit system;
-        overlays = [ llm-agents.overlays.shared-nixpkgs ];
-        config.allowUnfree = true;
-        config.nvidia.acceptLicense = true;
-      };
+      mkPkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+          config.nvidia.acceptLicense = true;
+        };
 
       commonModules = [
         nixvim.homeModules.nixvim
         ./home.nix
-        ./modules/brave/brave.nix
+        ./modules/linux/zathura.nix
+        ./modules/mac/karabiner.nix
+        ./modules/nixvim
         ./modules/wezterm/wezterm.nix
         ./modules/atuin.nix
         ./modules/bash.nix
         ./modules/bat.nix
         ./modules/carapace.nix
-        # ./modules/llm-agents.nix
         ./modules/direnv.nix
         ./modules/eza.nix
         ./modules/fd.nix
@@ -41,11 +46,8 @@
         ./modules/ghq.nix
         ./modules/git-commitizen.nix
         ./modules/git.nix
-        ./modules/go.nix
         ./modules/karabiner.nix
-        ./modules/kubernetes-helm.nix
         ./modules/lazygit.nix
-        ./modules/nixvim
         ./modules/man.nix
         ./modules/nerd-font.nix
         ./modules/nodejs.nix
@@ -55,7 +57,8 @@
         ./modules/zathura.nix
         ./modules/zoxide.nix
       ];
-    in {
+    in
+    {
       homeConfigurations = {
         "peco" = home-manager.lib.homeManagerConfiguration {
           pkgs = mkPkgs "aarch64-darwin";

@@ -10,12 +10,12 @@
     ./friendly-snippets.nix
     ./grug-far.nix
     ./illuminate.nix
-    ./luasnip.nix
     ./inc-rename.nix
     ./indent-blankline.nix
     ./lazygit.nix
     ./lsp.nix
     ./lualine.nix
+    ./luasnip.nix
     ./markdown-preview.nix
     ./mini-pairs.nix
     ./mini-surround.nix
@@ -27,7 +27,6 @@
     ./osc52.nix
     ./persistence.nix
     ./rainbow-delimiters.nix
-    ./sidekick.nix
     ./telescope.nix
     ./treesitter.nix
     ./trouble.nix
