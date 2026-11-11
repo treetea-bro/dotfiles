@@ -46,7 +46,6 @@
         ./modules/ghq.nix
         ./modules/git-commitizen.nix
         ./modules/git.nix
-        ./modules/karabiner.nix
         ./modules/lazygit.nix
         ./modules/man.nix
         ./modules/nerd-font.nix
@@ -54,7 +53,6 @@
         ./modules/ripgrep.nix
         ./modules/rust.nix
         ./modules/yazi.nix
-        ./modules/zathura.nix
         ./modules/zoxide.nix
       ];
     in
