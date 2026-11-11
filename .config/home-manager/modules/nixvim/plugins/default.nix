@@ -4,6 +4,7 @@
   imports = [
     ./blink-cmp.nix
     ./bufferline.nix
+    ./code-companion.nix
     ./conform.nix
     ./emmet.nix
     ./flash.nix
