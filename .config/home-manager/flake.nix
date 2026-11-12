@@ -50,6 +50,7 @@
         ./modules/man.nix
         ./modules/nerd-font.nix
         ./modules/nodejs.nix
+        ./modules/pi-agent.nix
         ./modules/ripgrep.nix
         ./modules/rust.nix
         ./modules/yazi.nix
