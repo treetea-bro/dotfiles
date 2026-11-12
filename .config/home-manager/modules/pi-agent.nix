@@ -7,6 +7,7 @@
     settings = {
       packages = [
         "npm:billion-context-pi"
+        "npm:pi-web-access"
       ];
     };
   };
