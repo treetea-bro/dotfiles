@@ -11,10 +11,9 @@ in
 
   # Embed the absolute path: notifications also work before a new login shell
   # picks up home.sessionVariables/PATH after home-manager switch.
-  home.file.".pi/agent/extensions/notify.ts".text = lib.replaceStrings
-    [ "@pi-notifier@" ]
-    [ notifierPath ]
-    (builtins.readFile ./notify.ts);
+  home.file.".pi/agent/extensions/notify.ts".text =
+    lib.replaceStrings [ "@pi-notifier@" ] [ notifierPath ]
+      (builtins.readFile ./notify.ts);
 
   programs.pi-coding-agent = {
     enable = true;
@@ -23,6 +22,7 @@ in
       packages = [
         "npm:billion-context-pi"
         "npm:pi-web-access"
+        "npm:@tmustier/pi-ralph-wiggum"
       ];
     };
   };
